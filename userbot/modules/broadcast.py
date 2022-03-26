@@ -8,12 +8,12 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, LOGS
 from userbot import CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot.modules.sql_helper import broadcast_sql as sql
 from userbot.utils import parse_pre
 
 
-@kyy_cmd(pattern="sendto ?(.*)")
+@joo_cmd(pattern="sendto ?(.*)")
 async def catbroadcast_send(event):
     if event.fwd_from:
         return
@@ -65,7 +65,7 @@ async def catbroadcast_send(event):
         )
 
 
-@kyy_cmd(pattern="fwdto ?(.*)")
+@joo_cmd(pattern="fwdto ?(.*)")
 async def catbroadcast_send(event):
     if event.fwd_from:
         return
@@ -117,7 +117,7 @@ async def catbroadcast_send(event):
         )
 
 
-@kyy_cmd(pattern="addto ?(.*)")
+@joo_cmd(pattern="addto ?(.*)")
 async def catbroadcast_add(event):
     if event.fwd_from:
         return
@@ -153,7 +153,7 @@ async def catbroadcast_add(event):
             )
 
 
-@kyy_cmd(pattern="rmfrom ?(.*)")
+@joo_cmd(pattern="rmfrom ?(.*)")
 async def catbroadcast_remove(event):
     if event.fwd_from:
         return
@@ -189,7 +189,7 @@ async def catbroadcast_remove(event):
             )
 
 
-@kyy_cmd(pattern="clist ?(.*)")
+@joo_cmd(pattern="clist ?(.*)")
 async def catbroadcast_list(event):
     if event.fwd_from:
         return
@@ -229,7 +229,7 @@ async def catbroadcast_list(event):
     await catevent.edit(finaloutput)
 
 
-@kyy_cmd(pattern="clistall ?(.*)")
+@joo_cmd(pattern="clistall ?(.*)")
 async def catbroadcast_list(event):
     if event.fwd_from:
         return
@@ -245,7 +245,7 @@ async def catbroadcast_list(event):
     await event.efit(resultext)
 
 
-@kyy_cmd(pattern="frmfrom ?(.*)")
+@joo_cmd(pattern="frmfrom ?(.*)")
 async def catbroadcast_remove(event):
     if event.fwd_from:
         return
@@ -302,7 +302,7 @@ async def catbroadcast_remove(event):
             )
 
 
-@kyy_cmd(pattern="delc ?(.*)")
+@joo_cmd(pattern="delc ?(.*)")
 async def catbroadcast_delete(event):
     if event.fwd_from:
         return
