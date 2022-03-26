@@ -1,10 +1,10 @@
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, joo_cmd
 from userbot import CMD_HELP, bot, CMD_HANDLER as cmd
 
 
 # Port By @VckyouuBitch From GeezProject
 # Untuk Siapapun Yang Hapus Credits Ini, Kamu Anjing:)
-@kyy_cmd(pattern="tmsg (.*)")
+@joo_cmd(pattern="tmsg (.*)")
 async def _(event):
     k = await event.get_reply_message()
     if k:
