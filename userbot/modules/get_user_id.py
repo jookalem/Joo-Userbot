@@ -1,10 +1,10 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 from userbot import bot, CMD_HELP, CMD_HANDLER as cmd
 
 
-@kyy_cmd(pattern="getid(?: |$)(.*)")
+@joo_cmd(pattern="getid(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -13,14 +13,14 @@ async def _(event):
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await edit_delete(event, "```Mohon Balas Ke Reply```")
+        await edit_delete(event, "```Mohon Reply Ke Pesan```")
         return
     chat = "@getidsbot"
     reply_message.sender
     if reply_message.sender.bot:
         await edit_delete(event, "`Mohon Reply Ke Pesan`")
         return
-    xx = await edit_or_reply(event, "`Mencari ID.......`")
+    xx = await edit_or_reply(event, "`Mencari ID... ⏳`")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(
