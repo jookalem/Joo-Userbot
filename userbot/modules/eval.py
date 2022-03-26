@@ -15,10 +15,10 @@ from os import remove
 from sys import executable
 
 from userbot import CMD_HELP, TERM_ALIAS, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, joo_cmd
 
 
-@kyy_cmd(pattern="eval(?: |$|\n)([\\s\\S]*)")
+@joo_cmd(pattern="eval(?: |$|\n)([\\s\\S]*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -77,7 +77,7 @@ async def aexec(code, smessatatus):
     return await locals()["__aexec"](message, reply, message.client)
 
 
-@kyy_cmd(pattern="exec(?: |$|\n)([\\s\\S]*)")
+@joo_cmd(pattern="exec(?: |$|\n)([\\s\\S]*)")
 async def run(run_q):
     """ For .exec command, which executes the dynamically created program """
     code = run_q.pattern_match.group(1)
@@ -141,7 +141,7 @@ async def run(run_q):
         )
 
 
-@kyy_cmd(pattern="term(?: |$|\n)(.*)")
+@joo_cmd(pattern="term(?: |$|\n)(.*)")
 async def terminal_runner(term):
     """ For .term command, runs bash commands and scripts on your server. """
     curruser = TERM_ALIAS if TERM_ALIAS else getuser()
