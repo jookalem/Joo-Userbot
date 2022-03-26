@@ -1,9 +1,9 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import CMD_HELP, bot, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 
 
-@kyy_cmd(pattern="(?:dgrup|dg)\\s?(.*)?")
+@joo_cmd(pattern="(?:dgrup|dg)\\s?(.*)?")
 async def _(event):
     if event.fwd_from:
         return
@@ -52,5 +52,5 @@ def user_full_name(user):
 CMD_HELP.update({
     "deteksi":
         f"`{cmd}dgrup` ; `{cmd}dg`\
-    \nPenjelasan: Melihat Riwayat Grup Yang Pernah / Sedang dimasuki."
+    \nPenjelasan: Melihat Riwayat Grup Yang Pernah / Sedang Dimasuki."
 })
