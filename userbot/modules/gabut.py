@@ -1,38 +1,38 @@
 from userbot import owner, CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 
 
-@kyy_cmd(pattern="p(?: |$)(.*)")
+@joo_cmd(pattern="p(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ`")
+    await typew.edit("`assalamualaikum ngentod`")
 # Salam
 
 
-@kyy_cmd(pattern="l(?: |$)(.*)")
+@joo_cmd(pattern="l(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ`")
+    await typew.edit("`waalaikumsalam ngentod`")
 # Menjawab Salam
 
 
-@kyy_cmd(pattern="istigfar(?: |$)(.*)")
+@joo_cmd(pattern="istigfar(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
-    await event.edit("`اَسْتَغْفِرُاللهَ الْعَظِيْم`")
+    await event.edit("`astaghfirullah ngentod`")
 # Istigfar
 
 
-@kyy_cmd(pattern="perkenalan(?: |$)(.*)")
+@joo_cmd(pattern="perkenalan(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
-    await event.edit(f"`Hai Guys , Perkenalkan Nama Gw {owner}`")
+    await event.edit(f"`hi anak ngentod, kenalin nama gua {owner}`")
     sleep(2)
-    await event.edit(f"`Gw Tinggal Di {WEATHER_DEFCITY}`")
+    await event.edit(f"`gua tinggal di {WEATHER_DEFCITY}`")
     sleep(2)
-    await event.edit("`Salam Kenal...`")
+    await event.edit("`salam kenal ya...`")
     sleep(2)
-    await event.edit("`Udah Gitu Aja :v`")
+    await event.edit("`senang bertemu denganmu`")
 # Perkenalan
 
 
