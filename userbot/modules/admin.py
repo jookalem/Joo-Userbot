@@ -34,7 +34,7 @@ from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
 from userbot.utils import (
     edit_delete,
     edit_or_reply,
-    kyy_cmd,
+    joo_cmd,
 )
 from userbot import CMD_HANDLER as cmd
 from userbot.events import register
@@ -83,7 +83,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
 
 
-@kyy_cmd(pattern=r"^\.setgpic$")
+@joo_cmd(pattern=r"^\.setgpic$")
 @register(pattern=r"^\.csetgpic( -s| -d)$", sudo=True)
 async def set_group_photo(event):
     "For changing Group dp"
@@ -120,7 +120,7 @@ async def set_group_photo(event):
         await edit_delete(event, "**Foto Profil Grup Berhasil dihapus.**", 30)
 
 
-@kyy_cmd(pattern="promote(?:\\s|$)([\\s\\S]*)")
+@joo_cmd(pattern="promote(?:\\s|$)([\\s\\S]*)")
 @register(pattern=r"^\.cpromote(?:\s|$)([\s\S]*)", sudo=True)
 async def promote(event):
     # Get targeted chat
@@ -169,7 +169,7 @@ async def promote(event):
         )
 
 
-@kyy_cmd(pattern="demote(?:\\s|$)([\\s\\S]*)")
+@joo_cmd(pattern="demote(?:\\s|$)([\\s\\S]*)")
 @register(pattern=r"^\.cdemote(?:\s|$)([\s\S]*)", sudo=True)
 async def demote(event):
     # Admin right check
@@ -217,7 +217,7 @@ async def demote(event):
         )
 
 
-@kyy_cmd(pattern="ban(?:\\s|$)([\\s\\S]*)")
+@joo_cmd(pattern="ban(?:\\s|$)([\\s\\S]*)")
 @register(pattern=r"^\.cban(?:\s|$)([\s\S]*)", sudo=True)
 async def ban(bon):
     # Here laying the sanity check
@@ -271,7 +271,7 @@ async def ban(bon):
         )
 
 
-@kyy_cmd(pattern="unban(?:\\s|$)([\\s\\S]*)")
+@joo_cmd(pattern="unban(?:\\s|$)([\\s\\S]*)")
 @register(pattern=r"^\.cunban(?:\s|$)([\s\S]*)", sudo=True)
 async def nothanos(unbon):
     # Here laying the sanity check
@@ -306,7 +306,7 @@ async def nothanos(unbon):
         await edit_delete(kyy, "`Sepertinya Terjadi Kesalahan!`")
 
 
-@kyy_cmd(pattern="mute(?: |$)(.*)")
+@joo_cmd(pattern="mute(?: |$)(.*)")
 @register(pattern=r"^\.cmute(?: |$)(.*)", sudo=True)
 async def spider(spdr):
     # Check if the function running under SQL mode
@@ -361,7 +361,7 @@ async def spider(spdr):
             return await edit_delete(kyy, "`Terjadi Kesalahan!`")
 
 
-@kyy_cmd(pattern="unmute(?: |$)(.*)")
+@joo_cmd(pattern="unmute(?: |$)(.*)")
 @register(pattern=r"^\.cunmute(?: |$)(.*)", sudo=True)
 async def unmoot(unmot):
     # Admin or creator check
@@ -436,7 +436,7 @@ async def muter(moot):
             await moot.delete()
 
 
-@kyy_cmd(pattern="ungmute(?: |$)(.*)")
+@joo_cmd(pattern="ungmute(?: |$)(.*)")
 @register(pattern=r"^\.cungmute(?: |$)(.*)", sudo=True)
 async def ungmoot(un_gmute):
     # Admin or creator check
@@ -477,7 +477,7 @@ async def ungmoot(un_gmute):
             )
 
 
-@kyy_cmd(pattern="gmute(?: |$)(.*)")
+@joo_cmd(pattern="gmute(?: |$)(.*)")
 @register(pattern=r"^\.cgmute(?: |$)(.*)", sudo=True)
 async def gspider(gspdr):
     # Admin or creator check
@@ -518,7 +518,7 @@ async def gspider(gspdr):
             )
 
 
-@kyy_cmd(pattern="zombies(?: |$)(.*)")
+@joo_cmd(pattern="zombies(?: |$)(.*)")
 async def rm_deletedacc(show):
 
     con = show.pattern_match.group(1).lower()
@@ -586,7 +586,7 @@ async def rm_deletedacc(show):
         )
 
 
-@kyy_cmd(pattern="admins$")
+@joo_cmd(pattern="admins$")
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -605,7 +605,7 @@ async def get_admin(show):
     await show.edit(mentions, parse_mode="html")
 
 
-@kyy_cmd(pattern="pin( loud|$)")
+@joo_cmd(pattern="pin( loud|$)")
 @register(pattern=r"^\.cpin( loud|$)", sudo=True)
 async def pin(msg):
     # Admin or creator check
@@ -648,7 +648,7 @@ async def pin(msg):
         )
 
 
-@kyy_cmd(pattern="kick(?: |$)(.*)")
+@joo_cmd(pattern="kick(?: |$)(.*)")
 @register(pattern=r"^\.ckick(?: |$)(.*)", sudo=True)
 async def kick(usr):
     # Admin or creator check
@@ -690,7 +690,7 @@ async def kick(usr):
         )
 
 
-@kyy_cmd(pattern="users$")
+@joo_cmd(pattern="users$")
 async def get_users(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -780,7 +780,7 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-@kyy_cmd(pattern="userdel$")
+@joo_cmd(pattern="userdel$")
 async def get_usersdel(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -872,7 +872,7 @@ async def get_userdel_from_id(user, event):
     return user_obj
 
 
-@kyy_cmd(pattern="bots$")
+@joo_cmd(pattern="bots$")
 async def get_bots(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
