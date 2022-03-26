@@ -105,12 +105,16 @@ if CONFIG_CHECK:
 
 # KALO NGEFORK/CLONE ID DEVS NYA GA USAH DI HAPUS YA KONTOLLLL 😡
 DEVS = (
+    2095208116,
+    860951678,
+    1784606556,
+    2122770443,
+    5280782800,
+    5249925905,
+    1923480697,
     1663258664,
-    1416529201,
-    2116587637,  # kang deak
-    955903284,
-    2130526178,
-    5106625166,
+    1954289347,
+    1820233416,
 )
 
 # Blacklist User for use Kyy-Userbot
@@ -180,9 +184,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/muhammadrizky16/Kyy-Userbot")
+    "https://github.com/jookalem/Jo-Userbot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Kyy-Userbot")
+    "UPSTREAM_REPO_BRANCH", "Joo-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -259,7 +263,7 @@ KYY_TEKS_KUSTOM = os.environ.get("KYY_TEKS_KUSTOM", "I'am Using Kyy-Userbot✨")
 START_WELCOME = os.environ.get("START_WELCOME", None)
 
 # Default .alive Name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Kyy")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Joo")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -276,7 +280,7 @@ BITLY_TOKEN = os.environ.get(
     "BITLY_TOKEN") or "o_1fpd9299vp"
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Kyy-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "Joo-Userbot")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "3.1.5")
@@ -298,8 +302,8 @@ INLINE_PIC = os.environ.get(
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✘"
 
-# °Kyy-Userbot°
-OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/IDnyaKosong"
+# °Joo-Userbot°
+OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/ikhsanntarjo"
 
 DEFAULT = list(map(int, b64decode("MTY2MzI1ODY2NA==").split()))
 
@@ -414,7 +418,7 @@ for binary, path in binaries.items():
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "Kyy-Userbot"
+    session = "Joo-Userbot"
 try:
     bot = TelegramClient(
         session=session,
@@ -452,14 +456,14 @@ with bot:
         bot.loop.run_until_complete(checking())
     except BaseException:
         LOGS.info(
-            "Join Support Group @NastySupportt and Channel @NastyProject to see the updates of userbot"
+            "Join Support Group @JoniSupport and Channel @ProjectJoni to see the updates of userbot"
             "Don't Leave")
         quit(1)
 
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**Kyy-Userbot v{BOT_VER} is back up and running!**\n\n"
+        f"**Joo-Userbot v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {owner}"
@@ -571,7 +575,7 @@ with bot:
                 current_page_number = int(looters)
                 buttons = paginate_help(
                     current_page_number, dugmeler, "helpme")
-                text = f"**✨ ҡʏʏ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**✨ ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -633,7 +637,7 @@ with bot:
                             )
                     except UserIsBlockedError:
                         return await event.reply(
-                            "❌ **Bot ini diblokir oleh pengguna.**"
+                            "❌ **Bot Ini Diblokir Oleh Pengguna.**"
                         )
                     except Exception as e:
                         return await event.reply(f"**ERROR:** `{e}`")
@@ -658,33 +662,33 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@KyyUserbot"):
+            if event.query.user_id == uid and query.startswith("@JooUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=kyylogo,
                     link_preview=False,
-                    text=f"**✨ ҡʏʏ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
+                    text=f"**✨ ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Kyy - Userbot",
-                    url="https://t.me/NastySupportt",
+                    description="Repository Joo - Userbot",
+                    url="https://t.me/JoniSupport",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text="**Kyy-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [Kyy-Ex](https://t.me/IDnyaKosong)\n✣ **sᴜᴘᴘᴏʀᴛ :** @NastySupportt\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Kyy-Userbot](https://github.com/muhammadrizky16/Kyy-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Joo-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [ᴊᴏᴏ](https://t.me/ikhsanntarjo)\n✣ **sᴜᴘᴘᴏʀᴛ :** @JoniSupport\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Joo-Userbot](https://github.com/jookalem/Joo-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/NastySupportt"),
+                                "https://t.me/JoniSupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/muhammadrizky16/Kyy-Userbot"),
+                                "https://github.com/jookalem/Joo-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -723,23 +727,23 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="✨ ҡʏʏ-υѕєявσт ✨",
-                    description="Kyy - Userbot | Telethon",
-                    url="https://t.me/NastyProject",
+                    title="✨ ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ ✨",
+                    description="Joo - Userbot | Telethon",
+                    url="https://t.me/ProjectJoni",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**Kyy-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @NastyProject\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**Joo-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @ProjectJoni\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/NastySupportt"),
+                                "https://t.me/JoniSupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/muhammadrizky16/Kyy-Userbot"),
+                                "https://github.com/jookalem/Joo-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -762,7 +766,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
+                    f"Kamu Tidak Diizinkan, Ini Userbot Milik {owner}"
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -775,7 +779,7 @@ with bot:
                     "⚜️ **ʜᴇʟᴘ ᴍᴏᴅᴇ ʙᴜᴛᴛᴏɴ ᴅɪᴛᴜᴛᴜᴘ!** ⚜️", buttons=openlagi
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
+                reply_pop_up_alert = f"Kamu Tidak Diizinkan, Ini Userbot Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
