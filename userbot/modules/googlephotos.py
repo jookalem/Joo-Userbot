@@ -129,7 +129,7 @@ async def upload_google_photos(event):
 
     if not event.reply_to_msg_id and not input_str:
         await event.edit(
-            "©️ <b>[GEEZ]</b>\nTidak Ada Yang Akan Membantu Anda", parse_mode="html"
+            "©️ <b>[JOO]</b>\nTidak Ada Yang Akan Membantu Anda", parse_mode="html"
         )
         return
 
