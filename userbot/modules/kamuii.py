@@ -1,13 +1,13 @@
 import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP, CMD_HANDLER as cmd
 
 
-@kyy_cmd(pattern='kamuii(:? |$)([1-8])?')
+@joo_cmd(pattern='kamuii(:? |$)([1-8])?')
 async def _(fry):
-    await fry.edit("`Prosess, Mengaktifkan jurus tumor bolong...😜`")
+    await fry.edit("`Muka Lu Udah Jelek Gua Acak Acak Lagi Ah..`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
@@ -67,7 +67,7 @@ async def _(fry):
     return os.remove(downloaded_file_name)
 
 
-@kyy_cmd(pattern='df(:? |$)([1-8])?')
+@joo_cmd(pattern='df(:? |$)([1-8])?')
 async def _(fry):
     await fry.edit("`Sedang Dalam Proses......`")
     level = fry.pattern_match.group(2)
@@ -132,5 +132,5 @@ async def _(fry):
 CMD_HELP.update({
     "kamuii":
     f"`.kamuii` or `{cmd}kamuii` [level(1-8)]"
-    "\nUsage: untuk mengubah foto/sticker."
+    "\nUsage: Untuk Mengubah Foto/Sticker Menjadi Jelek."
 })
