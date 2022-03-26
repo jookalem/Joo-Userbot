@@ -1,10 +1,10 @@
 # lorduserbot
 from telethon.tl import functions
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 
 
-@kyy_cmd(pattern="buat (gb|g|c)(?: |$)(.*)")
+@joo_cmd(pattern="buat (gb|g|c)(?: |$)(.*)")
 async def telegraphs(grop):
     """ For .create command, Creating New Group & Channel """
     if not grop.text[0].isalpha() and grop.text[0] not in ("/", "#", "@", "!"):
