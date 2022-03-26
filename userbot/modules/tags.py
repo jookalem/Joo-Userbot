@@ -9,11 +9,11 @@ from telethon.tl.types import UserStatusOnline as onn
 from telethon.tl.types import UserStatusRecently as rec
 from telethon.utils import get_display_name
 
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 
 
-@kyy_cmd(pattern="tag(on|off|all|bots|rec|admins|owner)?(.*)")
+@joo_cmd(pattern="tag(on|off|all|bots|rec|admins|owner)?(.*)")
 async def _(e):
     okk = e.text
     lll = e.pattern_match.group(2)
