@@ -5,19 +5,19 @@ import asyncio
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP, owner, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, joo_cmd
 
 
-@kyy_cmd(pattern="logo(?: |$)(.*)")
+@joo_cmd(pattern="logo(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
     aing = await event.client.get_me()
     text = event.pattern_match.group(1)
     if not text:
-        await edit_or_reply(event, "`Give a name too!`")
+        await edit_or_reply(event, "`Berikan Sebuah Text!`")
     else:
-        await edit_or_reply(event, "`Processing`")
+        await edit_or_reply(event, "`Proses Membuat Logo!`")
     chat = "@Nastymusiicbot"
     async with event.client.conversation(chat) as conv:
         try:
@@ -42,4 +42,4 @@ async def _(event):
 
 
 CMD_HELP.update({"logo": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}logo <text>`"
-                 "\n↳ : Hasilkan logo dari Teks atau Balas Ke gambar yang diberikan, untuk menulis teks Anda di atasnya. Atau Balas Ke File Font, Untuk menulis dengan font itu."})
+                 "\n↳ : , Untuk Membuat Logo."})
