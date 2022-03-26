@@ -19,13 +19,13 @@ from telethon.errors import (
     ChannelPublicGroupNaError)
 from telethon.utils import get_input_location
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
-from userbot.utils import edit_delete, edit_or_reply, kyy_cmd
+from userbot.utils import edit_delete, edit_or_reply, joo_cmd
 from userbot.events import register
 from userbot.modules.admin import get_user_from_event
 from telethon.utils import pack_bot_file_id
 
 
-@kyy_cmd(pattern="id(?: |$)(.*)")
+@joo_cmd(pattern="id(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -41,7 +41,7 @@ async def _(event):
         await edit_or_reply(event, "ID Grup: `{}`".format(str(event.chat_id)))
 
 
-@kyy_cmd(pattern="link(?: |$)(.*)")
+@joo_cmd(pattern="link(?: |$)(.*)")
 async def permalink(mention):
     """ For .link command, generates a link to the user's PM with a custom text. """
     user, custom = await get_user_from_event(mention)
@@ -55,7 +55,7 @@ async def permalink(mention):
         await edit_or_reply(mention, f"[{tag}](tg://user?id={user.id})")
 
 
-@kyy_cmd(pattern="getbot(?: |$)(.*)")
+@joo_cmd(pattern="getbot(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -85,7 +85,7 @@ async def _(event):
     await edit_or_reply(event, mentions)
 
 
-@kyy_cmd(pattern=r"logit(?: |$)([\s\S]*)")
+@joo_cmd(pattern=r"logit(?: |$)([\s\S]*)")
 async def log(log_text):
     """ For .log command, forwards a message or the command argument to the bot logs group """
     if BOTLOG:
@@ -104,14 +104,14 @@ async def log(log_text):
         await edit_delete(log_text, "`Fitur Ini Mengharuskan Loging Diaktifkan!`")
 
 
-@kyy_cmd(pattern="kickme$")
+@joo_cmd(pattern="kickme$")
 async def kickme(leave):
     """ Basically it's .kickme command """
     await edit_or_reply(leave, f"**{owner} Telah Meninggalkan Group,See You Semua!!**")
     await leave.client.kick_participant(leave.chat_id, 'me')
 
 
-@kyy_cmd(pattern="unmutechat$")
+@joo_cmd(pattern="unmutechat$")
 async def unmute_chat(unm_e):
     """ For .unmutechat command, unmute a muted chat. """
     try:
@@ -123,7 +123,7 @@ async def unmute_chat(unm_e):
     await edit_delete(unm_e, "```Berhasil Dibuka, Obrolan Tidak Lagi Dibisukan```")
 
 
-@kyy_cmd(pattern="mutechat$")
+@joo_cmd(pattern="mutechat$")
 async def mute_chat(mute_e):
     """ For .mutechat command, mute any chat. """
     try:
@@ -158,7 +158,7 @@ async def keep_read(message):
 regexNinja = False
 
 
-@kyy_cmd(pattern="s/")
+@joo_cmd(pattern="s/")
 async def sedNinja(event):
     """Untuk Modul Regex-Ninja, Perintah Hapus Otomatis Yang Dimulai Dengans/"""
     if regexNinja:
@@ -166,7 +166,7 @@ async def sedNinja(event):
         await event.delete()
 
 
-@kyy_cmd(pattern="regexninja (on|off)$")
+@joo_cmd(pattern="regexninja (on|off)$")
 async def sedNinjaToggle(event):
     """ Aktifkan Atau Nonaktifkan Modul Regex Ninja. """
     global regexNinja
@@ -178,7 +178,7 @@ async def sedNinjaToggle(event):
         await edit_delete(event, "`Berhasil Menonaktifkan Mode Regex Ninja.`")
 
 
-@kyy_cmd(pattern="chatinfo(?: |$)(.*)")
+@joo_cmd(pattern="chatinfo(?: |$)(.*)")
 async def info(event):
     await edit_delete(event, "`Menganalisis Obrolan Ini...`")
     chat = await get_chatinfo(event)
@@ -383,7 +383,7 @@ async def fetch_info(chat, event):
     return caption
 
 
-@kyy_cmd(pattern="invite(?: |$)(.*)")
+@joo_cmd(pattern="invite(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
