@@ -18,13 +18,13 @@ from telethon.errors.rpcerrorlist import (
     UserNotMutualContactError
 )
 
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 from telethon.tl.functions.channels import InviteToChannelRequest
 from telethon.tl.types import InputPeerUser
 
 
-@kyy_cmd(pattern="getmemb$")
+@joo_cmd(pattern="getmemb$")
 async def scrapmem(event):
     chat = event.chat_id
     await event.edit("`Mohon tunggu...`")
@@ -39,7 +39,7 @@ async def scrapmem(event):
     await event.edit("`Berhasil Mengumpulkan Member..`")
 
 
-@kyy_cmd(pattern="addmemb$")
+@joo_cmd(pattern="addmemb$")
 async def admem(event):
     await event.edit("`Proses Menambahkan 0 Member...`")
     chat = await event.get_chat()
