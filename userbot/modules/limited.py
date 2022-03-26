@@ -6,12 +6,12 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import bot, CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 
 
-@kyy_cmd(pattern="limit(?: |$)(.*)")
+@joo_cmd(pattern="limit(?: |$)(.*)")
 async def _(event):
-    await event.edit("`Checking If You Are Limited...`")
+    await event.edit("`Sabar Lagi Gua Cek Ngentod....`")
     async with bot.conversation("@SpamBot") as conv:
         try:
             response = conv.wait_event(
