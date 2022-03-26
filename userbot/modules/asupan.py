@@ -4,13 +4,13 @@
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 import random
 from userbot import owner
 from telethon.tl.types import InputMessagesFilterVideo
 
 
-@kyy_cmd(pattern="asupan$")
+@joo_cmd(pattern="asupan$")
 async def _(event):
     try:
         asupannya = [
@@ -29,6 +29,43 @@ async def _(event):
     except Exception:
         await event.edit("Tidak bisa menemukan video asupan.")
 
+@joo_cmd(pattern="desah(?: |$)(.*)")
+async def _(event):
+    try:
+        desahnya = [
+            desah
+            async for desah in event.client.iter_messages(
+                "@punyakenkan", filter=InputMessagesFilterVoice
+            )
+        ]
+        aing = await event.client.get_me()
+        await event.client.send_file(
+            event.chat_id,
+            file=random.choice(desahnya),
+            caption=f"**Nih Lord Desahannya🤗** [{DEFAULTUSER}](tg://user?id={aing.id})",
+        )
+        await event.delete()
+    except Exception:
+        await event.edit("Tidak Bisa Menemukan Desahan.")
+        
+@joo_cmd(pattern="ayang(?: |$)(.*)")
+async def _(event):
+    try:
+        ayangnya = [
+            ayang
+            async for ayang in event.client.iter_messages(
+                "@CeweLogoPack", filter=InputMessagesFilterPhotos
+            )
+        ]
+        aing = await event.client.get_me()
+        await event.client.send_file(
+            event.chat_id,
+            file=random.choice(ayangnya),
+            caption=f"**Nih Cantiknya Aku** 🥰 [{DEFAULTUSER}](tg://user?id={aing.id})",
+        )
+        await event.delete()
+    except Exception:
+        await event.edit("Gaada Yang Mau Sama Kamu Karena Kamu Jele🤪")
 
 CMD_HELP.update(
     {
