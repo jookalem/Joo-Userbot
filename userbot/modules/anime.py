@@ -25,7 +25,7 @@ from telethon.tl.types import (DocumentAttributeAnimated,
 from telethon.utils import is_image, is_video
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 
 jikan = Jikan()
 
@@ -194,7 +194,7 @@ def replace_text(text):
         "")
 
 
-@kyy_cmd(pattern="anime ?(.*)")
+@joo_cmd(pattern="anime ?(.*)")
 async def anime(event):
     query = event.pattern_match.group(1)
     reply = await event.get_reply_message()
@@ -270,7 +270,7 @@ async def anime(event):
     await event.edit(rep, parse_mode="HTML", link_preview=False)
 
 
-@kyy_cmd(pattern="manga ?(.*)")
+@joo_cmd(pattern="manga ?(.*)")
 async def manga(event):
     query = event.pattern_match.group(1)
     await event.edit("`Searching Manga...`")
@@ -318,7 +318,7 @@ async def manga(event):
         await event.edit(rep, parse_mode="HTML", link_preview=False)
 
 
-@kyy_cmd(pattern="a(kaizoku|kayo) ?(.*)")
+@joo_cmd(pattern="a(kaizoku|kayo) ?(.*)")
 async def site_search(event):
     message = await event.get_reply_message()
     search_query = event.pattern_match.group(2)
@@ -367,7 +367,7 @@ async def site_search(event):
             await event.edit(result, parse_mode="HTML")
 
 
-@kyy_cmd(pattern="char ?(.*)")
+@joo_cmd(pattern="char ?(.*)")
 async def character(event):
     message = await event.get_reply_message()
     search_query = event.pattern_match.group(1)
@@ -416,7 +416,7 @@ async def character(event):
     )
 
 
-@kyy_cmd(pattern="upcoming ?(.*)")
+@joo_cmd(pattern="upcoming ?(.*)")
 async def upcoming(message):
     rep = "<b>Upcoming anime</b>\n"
     later = jikan.season_later()
@@ -430,7 +430,7 @@ async def upcoming(message):
         await message.edit(rep, parse_mode="html")
 
 
-@kyy_cmd(pattern="scanime ?(.*)")
+@joo_cmd(pattern="scanime ?(.*)")
 async def get_anime(message):
     try:
         query = message.pattern_match.group(1)
@@ -551,7 +551,7 @@ async def manga(message):
     )
 
 
-@kyy_cmd(pattern="sanime ?(.*)")
+@joo_cmd(pattern="sanime ?(.*)")
 async def anime(message):
     search_query = message.pattern_match.group(1)
     await message.get_reply_message()
@@ -573,7 +573,7 @@ async def anime(message):
         )
 
 
-@kyy_cmd(pattern="whatanime")
+@joo_cmd(pattern="whatanime")
 async def whatanime(e):
     media = e.media
     if not media:
