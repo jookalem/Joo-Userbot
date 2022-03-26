@@ -42,4 +42,4 @@ async def _(event):
 
 
 CMD_HELP.update({"logo": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}logo <text>`"
-                 "\n↳ : , Untuk Membuat Logo."})
+                 "\n↳ : Untuk Membuat Logo."})
