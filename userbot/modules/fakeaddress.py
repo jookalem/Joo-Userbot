@@ -2,13 +2,13 @@ import json
 import urllib.request
 
 
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 
 
 # Port By @VckyouuBitch From GeezProject
 # Buat Kamu Yang Hapus Credits. Intinya Kamu Anjing:)
-@kyy_cmd(pattern="ip(?: |$)(.*)")
+@joo_cmd(pattern="ip(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
