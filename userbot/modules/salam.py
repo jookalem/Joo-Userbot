@@ -1,34 +1,34 @@
 from platform import uname
 from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@kyy_cmd(pattern='^P(?: |$)(.*)')
+@joo_cmd(pattern='^P(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("𝐀𝐬𝐬𝐚𝐥𝐚𝐦𝐮'𝐚𝐥𝐚𝐢𝐤𝐮𝐦...")
 
 
-@kyy_cmd(pattern='atg(?: |$)(.*)')
+@joo_cmd(pattern='atg(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("𝐀𝐒𝐓𝐀𝐆𝐇𝐅𝐈𝐑𝐔𝐋𝐋𝐀𝐇....SAYANG!!!!")
+    await typew.edit("𝐀𝐬𝐭𝐚𝐠𝐡𝐟𝐢𝐫𝐮𝐥𝐥𝐚𝐡....")
 
 
-@kyy_cmd(pattern='^L(?: |$)(.*)')
+@joo_cmd(pattern='^L(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("𝐖𝐚'𝐚𝐥𝐚𝐢𝐤𝐮𝐦𝐬𝐚𝐥𝐚𝐦...")
 
 
-@kyy_cmd(pattern='ast(?: |$)(.*)')
+@joo_cmd(pattern='ast(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("𝐀𝐒𝐓𝐀𝐆𝐇𝐅𝐈𝐑𝐔𝐋𝐋𝐀𝐇......")
+    await typew.edit("𝐀𝐬𝐭𝐚𝐠𝐡𝐟𝐢𝐫𝐮𝐥𝐥𝐚𝐡 𝐀𝐧𝐚𝐤 𝐍𝐠𝐞𝐧𝐭𝐨𝐭...")
 
 
 CMD_HELP.update({
