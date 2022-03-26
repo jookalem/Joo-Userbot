@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from pytz import timezone
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot import CMD_HELP, bot, LOGS, CLEAN_WELCOME, BOTLOG_CHATID, CMD_HANDLER as cmd
 from telethon.events import ChatAction
 
@@ -101,7 +101,7 @@ async def welcome_to_chat(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-@kyy_cmd(pattern="setwelcome(?: |$)(.*)")
+@joo_cmd(pattern="setwelcome(?: |$)(.*)")
 async def save_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import add_welcome_setting
@@ -137,7 +137,7 @@ async def save_welcome(event):
         await event.edit(success.format('Disini'))
 
 
-@kyy_cmd(pattern="checkwelcome$")
+@joo_cmd(pattern="checkwelcome$")
 async def show_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import get_current_welcome_settings
@@ -158,7 +158,7 @@ async def show_welcome(event):
         await event.reply(cws.reply)
 
 
-@kyy_cmd(pattern="rmwelcome$")
+@joo_cmd(pattern="rmwelcome$")
 async def del_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import rm_welcome_setting
