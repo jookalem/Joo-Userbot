@@ -7,7 +7,7 @@ import random
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import edit_delete, edit_or_reply, kyy_cmd
+from userbot.utils import edit_delete, edit_or_reply, joo_cmd
 from userbot.utils.misc import Carbon
 
 from .vcg import vcmention
@@ -164,7 +164,7 @@ all_col = [
 ]
 
 
-@kyy_cmd(pattern="(rc|c)arbon")
+@joo_cmd(pattern="(rc|c)arbon")
 async def crbn(event):
     from_user = vcmention(event.sender)
     xxxx = await edit_or_reply(event, "`Processing...`")
@@ -194,7 +194,7 @@ async def crbn(event):
     )
 
 
-@kyy_cmd(pattern="ccarbon ?(.*)")
+@joo_cmd(pattern="ccarbon ?(.*)")
 async def crbn(event):
     from_user = vcmention(event.sender)
     match = event.pattern_match.group(1).strip()
