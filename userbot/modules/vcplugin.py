@@ -21,7 +21,7 @@ from userbot import CMD_HELP
 from userbot import PLAY_PIC as fotoplay
 from userbot import QUEUE_PIC as ngantri
 from userbot import call_py, owner
-from userbot.utils import bash, edit_delete, edit_or_reply, kyy_cmd
+from userbot.utils import bash, edit_delete, edit_or_reply, joo_cmd
 from userbot.utils.chattitle import CHAT_TITLE
 from userbot.utils.queues.queues import (
     QUEUE,
@@ -108,7 +108,7 @@ async def skip_current_song(chat_id: int):
     return [songname, link, type]
 
 
-@kyy_cmd(pattern="play(?:\\s|$)([\\s\\S]*)")
+@joo_cmd(pattern="play(?:\\s|$)([\\s\\S]*)")
 async def vc_play(event):
     title = event.pattern_match.group(1)
     replied = await event.get_reply_message()
@@ -200,7 +200,7 @@ async def vc_play(event):
                 await botman.edit(f"`{ep}`")
 
 
-@kyy_cmd(pattern="vplay(?:\\s|$)([\\s\\S]*)")
+@joo_cmd(pattern="vplay(?:\\s|$)([\\s\\S]*)")
 async def vc_vplay(event):
     title = event.pattern_match.group(1)
     replied = await event.get_reply_message()
@@ -328,7 +328,7 @@ async def vc_vplay(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(
                     chat_id, songname, ytlink, url, "Video", RESOLUSI)
-                caption = f"💡 **Video Ditambahkan Ke antrian »** `#{pos}`\n\n🏷 **Judul:** [{songname}]({url})\n**⏱ Durasi:** `{duration}`\n🎧 **Atas permintaan:** {from_user}"
+                caption = f"💡 **Video Ditambahkan Ke Antrian »** `#{pos}`\n\n🏷 **Judul:** [{songname}]({url})\n**⏱ Durasi:** `{duration}`\n🎧 **Atas Permintaan:** {from_user}"
                 await xnxx.delete()
                 await event.client.send_file(chat_id, thumb, caption=caption)
             else:
@@ -345,7 +345,7 @@ async def vc_vplay(event):
                         url,
                         "Video",
                         RESOLUSI)
-                    caption = f"🏷 **Judul:** [{songname}]({url})\n**⏱ Durasi:** `{duration}`\n💡 **Status:** `Sedang Memutar Video`\n🎧 **Atas permintaan:** {from_user}"
+                    caption = f"🏷 **Judul:** [{songname}]({url})\n**⏱ Durasi:** `{duration}`\n💡 **Status:** `Sedang Memutar Video`\n🎧 **Atas Permintaan:** {from_user}"
                     await xnxx.delete()
                     await event.client.send_file(chat_id, thumb, caption=caption)
                 except Exception as ep:
@@ -353,7 +353,7 @@ async def vc_vplay(event):
                     await xnxx.edit(f"`{ep}`")
 
 
-@kyy_cmd(pattern="end$")
+@joo_cmd(pattern="end$")
 async def vc_end(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
@@ -367,7 +367,7 @@ async def vc_end(event):
         await edit_delete(event, "**Tidak Sedang Memutar Streaming**")
 
 
-@kyy_cmd(pattern="skip(?:\\s|$)([\\s\\S]*)")
+@joo_cmd(pattern="skip(?:\\s|$)([\\s\\S]*)")
 async def vc_skip(event):
     chat_id = event.chat_id
     if len(event.text.split()) < 2:
@@ -396,33 +396,33 @@ async def vc_skip(event):
             await event.edit(DELQUE)
 
 
-@kyy_cmd(pattern="pause$")
+@joo_cmd(pattern="pause$")
 async def vc_pause(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
         try:
             await call_py.pause_stream(chat_id)
-            await edit_or_reply(event, "**Streaming Dijeda**")
+            await edit_or_reply(event, "**Streaming Berhasil Dijeda Lord!😈**")
         except Exception as e:
             await edit_delete(event, f"**ERROR:** `{e}`")
     else:
-        await edit_delete(event, "**Tidak Sedang Memutar Streaming**")
+        await edit_delete(event, "`**Tidak Sedang Memutar Streaming**`")
 
 
-@kyy_cmd(pattern="resume$")
+@joo_cmd(pattern="resume$")
 async def vc_resume(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
         try:
             await call_py.resume_stream(chat_id)
-            await edit_or_reply(event, "**Streaming Dilanjutkan**")
+            await edit_or_reply(event, "**Streaming Berhasil Dilanjutkan Lord!😈**")
         except Exception as e:
             await edit_or_reply(event, f"**ERROR:** `{e}`")
     else:
-        await edit_delete(event, "**Tidak Sedang Memutar Streaming**")
+        await edit_delete(event, "`**Tidak Sedang Memutar Streaming**`")
 
 
-@kyy_cmd(pattern=r"volume(?: |$)(.*)")
+@joo_cmd(pattern=r"volume(?: |$)(.*)")
 async def vc_volume(event):
     query = event.pattern_match.group(1)
     chat = await event.get_chat()
@@ -445,7 +445,7 @@ async def vc_volume(event):
         await edit_delete(event, "**Tidak Sedang Memutar Streaming**")
 
 
-@kyy_cmd(pattern="playlist$")
+@joo_cmd(pattern="playlist$")
 async def vc_playlist(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
