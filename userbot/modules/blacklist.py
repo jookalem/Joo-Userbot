@@ -11,7 +11,7 @@ import re
 
 import userbot.modules.sql_helper.blacklist_sql as sql
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot.events import register
 
 
@@ -33,7 +33,7 @@ async def on_new_message(event):
             break
 
 
-@kyy_cmd(pattern="addbl(?: |$)(.*)")
+@joo_cmd(pattern="addbl(?: |$)(.*)")
 async def on_add_black_list(addbl):
     text = addbl.pattern_match.group(1)
     to_blacklist = list(
@@ -47,7 +47,7 @@ async def on_add_black_list(addbl):
     )
 
 
-@kyy_cmd(pattern="listbl(?: |$)(.*)")
+@joo_cmd(pattern="listbl(?: |$)(.*)")
 async def on_view_blacklist(listbl):
     all_blacklisted = sql.get_chat_blacklist(listbl.chat_id)
     OUT_STR = "Blacklists in the Current Chat:\n"
