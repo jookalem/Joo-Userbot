@@ -15,23 +15,23 @@
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Dapatkan Api Key di web my.telegram.org",
+      "description": "Dapatkan Api Key Di @JoniSupport, Dengan Mengetik /get api atau #api",
       "required": true
     },
     "API_HASH": {
-      "description": "Dapatkan Api Hash Di Web my.telegram.org",
+      "description": "Dapatkan Api Hash Di @JoniSupport, Dengan Mengetik /get hash atau #hash",
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @IDnyaKosong di telegram",
+      "description": "Dapatkan String Session Di @JoniSupport, Dengan Mengetik /get string atau #string",
       "required": true
     },
     "HEROKU_APP_NAME": {
-      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
+      "description": "Nama App Heroku, Nama App Yang Paling Pertama Di Isi (Liat Paling Atas)",
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
+      "description": "Heroku API KEY Mu, Dapatkan Dari Web 'https://dashboard.heroku.com/account'",
       "value": "Check Di Heroku Dashboard Mu",
       "required": true
     },
