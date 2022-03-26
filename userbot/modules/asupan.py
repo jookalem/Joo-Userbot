@@ -71,7 +71,11 @@ CMD_HELP.update(
     {
         "asupan": f"**Plugin : **`asupan`\
         \n\n  •  **Syntax :** `{cmd}asupan`\
-        \n  •  **Function : **Untuk Mengirim video asupan secara random.\
+        \n  •  **Function : **Untuk Mengirim Video Asupan Secara random.\
+        \n\n  •  **Syntax :** `{cmd}desah`\
+        \n  •  **Function : **Untuk Mengirim Suara Desah Buat Lu Yang Sange.\
+        \n\n  •  **Syntax :** `{cmd}ayang`\
+        \n  •  **Function : **Untuk Mencari Ayang Buat Cowok Yang Jomblo.\
     "
     }
 )
