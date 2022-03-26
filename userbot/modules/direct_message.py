@@ -1,8 +1,8 @@
-from userbot.utils import edit_delete, edit_or_reply, kyy_cmd
+from userbot.utils import edit_delete, edit_or_reply, joo_cmd
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 
 
-@kyy_cmd(pattern="(?:dm)\\s?(.*)?")
+@joo_cmd(pattern="(?:dm)\\s?(.*)?")
 async def remoteaccess(event):
 
     p = event.pattern_match.group(1)
