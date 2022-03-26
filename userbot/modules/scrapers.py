@@ -56,7 +56,7 @@ from userbot import (
     bot
 )
 from userbot import CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 from userbot.utils import chrome, googleimagesdownload, progress, options
 
 TTS_LANG = "id"
@@ -98,14 +98,14 @@ DOGBIN_URL = "https://del.dog/"
 NEKOBIN_URL = "https://nekobin.com/"
 
 
-@kyy_cmd(pattern="crblangg (.*)")
+@joo_cmd(pattern="crblangg (.*)")
 async def setlang(prog):
     global CARBONLANG
     CARBONLANG = prog.pattern_match.group(1)
     await prog.edit(f"Language for carbon.now.sh set to {CARBONLANG}")
 
 
-@kyy_cmd(pattern="images (.*)")
+@joo_cmd(pattern="images (.*)")
 async def img_sampler(event):
     """ For .img command, search and return images matching the query. """
     await event.edit("Mencari Gambar...")
@@ -136,7 +136,7 @@ async def img_sampler(event):
     await event.delete()
 
 
-@kyy_cmd(pattern="currency (.*)")
+@joo_cmd(pattern="currency (.*)")
 async def moni(event):
     input_str = event.pattern_match.group(1)
     input_sgra = input_str.split(" ")
@@ -164,7 +164,7 @@ async def moni(event):
         return await event.edit("`Invalid syntax.`")
 
 
-@kyy_cmd(pattern="google(.*)")
+@joo_cmd(pattern="google(.*)")
 async def gsearch(q_event):
     match = q_event.pattern_match.group(1)
     page = findall(r"page=\d+", match)
@@ -197,7 +197,7 @@ async def gsearch(q_event):
         )
 
 
-@kyy_cmd(pattern="wiki (.*)")
+@joo_cmd(pattern="wiki (.*)")
 async def wiki(wiki_q):
     match = wiki_q.pattern_match.group(1)
     try:
@@ -226,7 +226,7 @@ async def wiki(wiki_q):
         )
 
 
-@kyy_cmd(pattern="ud (.*)")
+@joo_cmd(pattern="ud (.*)")
 async def urban_dict(ud_e):
     xx = await edit_or_reply(ud_e, "Processing...")
     query = ud_e.pattern_match.group(1)
@@ -278,7 +278,7 @@ async def urban_dict(ud_e):
         await edit_delete(ud_e, "No result found for **" + query + "**")
 
 
-@kyy_cmd(pattern="tts(?: |$)([\\s\\S]*)")
+@joo_cmd(pattern="tts(?: |$)([\\s\\S]*)")
 async def text_to_speech(query):
     textx = await query.get_reply_message()
     message = query.pattern_match.group(1)
@@ -321,7 +321,7 @@ async def text_to_speech(query):
 
 
 # kanged from Blank-x ;---;
-@kyy_cmd(pattern="imdb (.*)")
+@joo_cmd(pattern="imdb (.*)")
 async def imdb(e):
     try:
         movie_name = e.pattern_match.group(1)
@@ -416,7 +416,7 @@ async def imdb(e):
         await cs.edit("Plox enter **Valid movie name** kthx")
 
 
-@kyy_cmd(pattern="tr(?: |$)([\\s\\S]*)")
+@joo_cmd(pattern="tr(?: |$)([\\s\\S]*)")
 async def translateme(trans):
     translator = Translator()
     textx = await trans.get_reply_message()
@@ -445,7 +445,7 @@ async def translateme(trans):
         )
 
 
-@kyy_cmd(pattern="lang (tr|tts) (.*)")
+@joo_cmd(pattern="lang (tr|tts) (.*)")
 async def lang(value):
     util = value.pattern_match.group(1).lower()
     if util == "tr":
@@ -477,7 +477,7 @@ async def lang(value):
         )
 
 
-@kyy_cmd(pattern="wolfram (.*)")
+@joo_cmd(pattern="wolfram (.*)")
 async def wolfram(wvent):
     if WOLFRAM_ID is None:
         await wvent.edit(
@@ -498,7 +498,7 @@ async def wolfram(wvent):
         )
 
 
-@kyy_cmd(pattern="ytsearch (.*)")
+@joo_cmd(pattern="ytsearch (.*)")
 async def yt_search(video_q):
     query = video_q.pattern_match.group(1)
     if not query:
@@ -516,7 +516,7 @@ async def yt_search(video_q):
     await video_q.edit(output, link_preview=False)
 
 
-@kyy_cmd(pattern="(aud|vid) (.*)")
+@joo_cmd(pattern="(aud|vid) (.*)")
 async def download_video(v_url):
     url = v_url.pattern_match.group(2)
     url = v_url.pattern_match.group(1).lower()
@@ -628,7 +628,7 @@ def deEmojify(inputString):
     return get_emoji_regexp().sub("", inputString)
 
 
-@kyy_cmd(pattern="ocr (.*)")
+@joo_cmd(pattern="ocr (.*)")
 async def ocr(event):
     if not OCR_SPACE_API_KEY:
         return await event.edit(
@@ -652,7 +652,7 @@ async def ocr(event):
     os.remove(downloaded_file_name)
 
 
-@kyy_cmd(pattern="ss (.*)")
+@joo_cmd(pattern="ss (.*)")
 async def capture(url):
     """ For .ss command, capture a website's screenshot and send the photo. """
     await url.edit("`Processing...`")
@@ -701,7 +701,7 @@ async def capture(url):
         await url.delete()
 
 
-@kyy_cmd(pattern="nekko(?: |$)([\\s\\S]*)")
+@joo_cmd(pattern="nekko(?: |$)([\\s\\S]*)")
 async def neko(nekobin):
     """For .paste command, pastes the text directly to dogbin."""
     nekobin_final_url = ""
@@ -754,7 +754,7 @@ async def neko(nekobin):
         )
 
 
-@kyy_cmd(pattern="neko(?: |$)([\\s\\S]*)")
+@joo_cmd(pattern="neko(?: |$)([\\s\\S]*)")
 async def neko(nekobin):
     """For .paste command, pastes the text directly to dogbin."""
     nekobin_final_url = ""
@@ -802,7 +802,7 @@ async def neko(nekobin):
     await nekobin.edit(reply_text)
 
 
-@kyy_cmd(pattern="getpaste(?: |$)(.*)")
+@joo_cmd(pattern="getpaste(?: |$)(.*)")
 async def get_dogbin_content(dog_url):
     textx = await dog_url.get_reply_message()
     message = dog_url.pattern_match.group(1)
@@ -854,7 +854,7 @@ async def get_dogbin_content(dog_url):
         )
 
 
-@kyy_cmd(pattern="removebg(?: |$)(.*)")
+@joo_cmd(pattern="removebg(?: |$)(.*)")
 async def kbg(remob):
     """ For .rbg command, Remove Image Background. """
     if REM_BG_API_KEY is None:
@@ -937,7 +937,7 @@ async def ReTrieveURL(input_url):
     return r
 
 
-@kyy_cmd(pattern="direct(?: |$)([\\s\\S]*)")
+@joo_cmd(pattern="direct(?: |$)([\\s\\S]*)")
 async def direct_link_generator(request):
     """ direct links generator """
     await request.edit("`Processing...`")
@@ -1240,7 +1240,7 @@ def useragent():
     return user_agent.text
 
 
-@kyy_cmd(pattern="decode$")
+@joo_cmd(pattern="decode$")
 async def parseqr(qr_e):
     """ For .decode command, get QR Code/BarCode content from the replied photo. """
     downloaded_file_name = await qr_e.client.download_media(
@@ -1312,7 +1312,7 @@ async def bq(event):
     await event.delete()
 
 
-@kyy_cmd(pattern="makeqr(?: |$)([\\s\\S]*)")
+@joo_cmd(pattern="makeqr(?: |$)([\\s\\S]*)")
 async def make_qr(makeqr):
     """ For .makeqr command, make a QR Code containing the given content. """
     input_str = makeqr.pattern_match.group(1)
