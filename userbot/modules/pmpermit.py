@@ -8,7 +8,7 @@ from sqlalchemy.exc import IntegrityError
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
 from telethon.tl.types import User
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 from userbot.events import register
 from userbot import CMD_HANDLER as cmd
 from userbot import (
@@ -38,17 +38,17 @@ LASTMSG = {}
 # ========================= CONSTANTS ============================
 
 CUSTOM_TEXT = str(
-    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Halo kawan, saya bot yang menjaga room chat Kyy-Userbot {owner} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
+    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Hi Bro, Saya Bot Yang Menjaga Room Chat Joo-Userbot {owner} Di Mohon Jangan Melakukan Spam, Jika Anda Melakukan Itu OTOMATIS Saya Akan Memblockir Anda!__ \n"
 DEF_UNAPPROVED_MSG = (
-    "╔═════════════════════════╗\n"
-    " 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗧𝗛𝗘 𝗣𝗥𝗜𝗩𝗔𝗖𝗬 𝗠𝗘𝗦𝗦𝗔𝗚𝗘 \n"
-    "╚═════════════════════════╝\n"
-    "**Dimohon Untuk Tidak Melakukan Spam Ke Room Chat ini!** \n"
-    f"**Karena bisa menggangu** {owner} \n"
-    f"**Jika Anda Melakukan Spamming, Anda Akan Terblokir Otomatis!**\n"
+    "╔═════════════════════╗\n"
+    "    ⚡ 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 ⚡ \n"
+    "╚═════════════════════╝\n"
+    "ᴛᴏʟᴏɴɢ ᴊᴀɴɢᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ ᴄʜᴀᴛ ᴘᴀᴅᴀ ᴛᴜᴀɴ sᴀʏᴀ \n"
+    f"sᴀʏᴀ ᴀᴋᴀɴ ᴍᴇᴍʙʟᴏᴋɪʀ ᴀɴᴅᴀ ᴊɪᴋᴀ ᴀɴᴅᴀ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ \n"
+    f"ᴛᴜɴɢɢᴜ sᴀᴍᴘᴀɪ ᴛᴜᴀɴ ᴍᴇɴᴇʀɪᴍᴀ ᴘᴇsᴀɴ ᴋᴀᴍᴜ \n"
     "╔═════════════════════╗\n"
     f"➠ 𝗢𝘄𝗻𝗲𝗿 : {owner} \n"
-    f"➠ 𝗣𝗲𝘀𝗮𝗻 𝗢𝘁𝗼𝗺𝗮𝘁𝗶𝘀 𝗯𝘆 𝗞𝘆𝘆-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n"
+    f"➠ 𝗣𝗲𝘀𝗮𝗻 𝗢𝘁𝗼𝗺𝗮𝘁𝗶𝘀 𝗯𝘆 𝗝𝗼𝗼-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n"
     "╚═════════════════════╝")
 # =================================================================
 
@@ -107,8 +107,8 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
-                    "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
-                    f"`Ke Room Chat Ini`"
+                    "ɢᴜᴀ ʙʟᴏᴋɪʀ ʟᴏ ᴋᴏɴᴛᴏʟ, ɢᴀᴜsᴀʜ ɴɢᴇsᴘᴀᴍ\n"
+                    f"ᴛᴜᴀɴ ɢᴜᴀ ɢᴏʙʟᴏᴋ"
                 )
 
                 try:
@@ -189,7 +189,7 @@ async def auto_accept(event):
                     )
 
 
-@kyy_cmd(pattern="notifoff$")
+@joo_cmd(pattern="notifoff$")
 async def notifoff(noff_event):
     """For .notifoff command, stop getting notifications from unapproved PMs."""
     try:
@@ -200,7 +200,7 @@ async def notifoff(noff_event):
     await noff_event.edit("`Notifikasi Dari Pesan Pribadi Tidak Disetujui, Telah Dibisukan!`")
 
 
-@kyy_cmd(pattern="notifon$")
+@joo_cmd(pattern="notifon$")
 async def notifon(non_event):
     """For .notifoff command, get notifications from unapproved PMs."""
     try:
@@ -211,7 +211,7 @@ async def notifon(non_event):
     await non_event.edit("`Notifikasi Dari Pesan Pribadi Tidak Disetujui, Tidak Lagi Dibisukan!`")
 
 
-@kyy_cmd(pattern="(?:setuju|ok)\\s?(.)?")
+@joo_cmd(pattern="(?:setuju|ok)\\s?(.)?")
 async def approvepm(apprvpm):
     """For .ok command, give someone the permissions to PM you."""
     try:
@@ -247,9 +247,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await edit_delete(apprvpm, "`Oke Pesan Anda Sudah Diterima ツ`")
+        return await edit_delete(apprvpm, "ᴏᴋᴇ, ᴘᴇsᴀɴ ᴀɴᴅᴀ sᴜᴅᴀʜ ᴅɪ ᴛᴇʀɪᴍᴀ ツ")
 
-    await edit_delete(apprvpm, f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima 😎`")
+    await edit_delete(apprvpm, f"ʜᴀɪ [{name0}](tg://user?id={uid}) ᴘᴇsᴀɴ ᴀɴᴅᴀ sᴜᴅᴀʜ ᴅɪ ᴛᴇʀɪᴍᴀ 😎")
     await edit_delete(apprvpm, getmsg)
     await message.delete()
 
@@ -260,7 +260,7 @@ async def approvepm(apprvpm):
         )
 
 
-@kyy_cmd(pattern="(?:tolak|nopm)\\s?(.)?")
+@joo_cmd(pattern="(?:tolak|nopm)\\s?(.)?")
 async def disapprovepm(disapprvpm):
     try:
         from userbot.modules.sql_helper.pm_permit_sql import dissprove
@@ -279,7 +279,7 @@ async def disapprovepm(disapprvpm):
         name0 = str(aname.first_name)
 
     await edit_or_reply(disapprvpm,
-                        f"`Maaf` [{name0}](tg://user?id={disapprvpm.chat_id}) `Pesan Anda Telah Ditolak, Mohon Jangan Melakukan Spam Ke Room Chat!`"
+                        f"ᴍᴀᴀғ [{name0}](tg://user?id={disapprvpm.chat_id}) ᴘᴇsᴀɴ ᴀɴᴅᴀ ᴛᴇʟᴀʜ ᴅɪ ᴛᴏʟᴀᴋ ᴏʟᴇʜ {owner} , ᴍᴏʜᴏɴ ᴊᴀɴɢᴀɴ ᴍᴇʟᴀʟᴜᴋᴀɴ sᴘᴀᴍ ᴄʜᴀᴛ"
                         )
 
     if BOTLOG:
@@ -290,7 +290,7 @@ async def disapprovepm(disapprvpm):
         )
 
 
-@kyy_cmd(pattern="block$")
+@joo_cmd(pattern="block$")
 async def blockpm(block):
     """For .block command, block people from PMing you!"""
     if block.reply_to_msg_id:
@@ -299,12 +299,12 @@ async def blockpm(block):
         aname = replied_user.id
         name0 = str(replied_user.first_name)
         await block.client(BlockRequest(aname))
-        await block.edit(f"`Anda Telah Diblokir Oleh {owner}`")
+        await block.edit(f"ᴀɴᴅᴀ ᴛᴇʟᴀʜ ᴅɪ ʙʟᴏᴋɪʀ ᴏʟᴇʜ {owner}")
         uid = replied_user.id
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit(f"`Anda Telah Diblokir Oleh {owner}`")
+        await block.edit(f"ᴀɴᴅᴀ ᴛᴇʟᴀʜ ᴅɪ ʙʟᴏᴋɪʀ ᴏʟᴇʜ {owner}")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
@@ -322,7 +322,7 @@ async def blockpm(block):
         )
 
 
-@kyy_cmd(pattern="unblock$")
+@joo_cmd(pattern="unblock$")
 async def unblockpm(unblock):
     """For .unblock command, let people PMing you again!"""
     if unblock.reply_to_msg_id:
@@ -330,7 +330,7 @@ async def unblockpm(unblock):
         replied_user = await unblock.client.get_entity(reply.from_id)
         name0 = str(replied_user.first_name)
         await unblock.client(UnblockRequest(replied_user.id))
-        await unblock.edit("`Anda Sudah Tidak Diblokir Lagi.`")
+        await unblock.edit("ʙʟᴏᴋɪʀ ᴀɴᴅᴀ ᴛᴇʟᴀʜ ᴅɪʟᴇᴘᴀs ᴏʟᴇʜ {owner}")
 
     if BOTLOG:
         await unblock.client.send_message(
@@ -339,7 +339,7 @@ async def unblockpm(unblock):
         )
 
 
-@kyy_cmd(pattern="(set|get|reset) pm_msg(?: |$)(\\w*)")
+@joo_cmd(pattern="(set|get|reset) pm_msg(?: |$)(\\w*)")
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
