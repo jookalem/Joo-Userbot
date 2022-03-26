@@ -10,10 +10,10 @@ from subprocess import run as runapp
 import pybase64
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 
 
-@kyy_cmd(pattern="hash (.*)")
+@joo_cmd(pattern="hash (.*)")
 async def gethash(hash_q):
     """ For .hash command, find the md5, sha1, sha256, sha512 of the string. """
     hashtxt_ = hash_q.pattern_match.group(1)
@@ -57,7 +57,7 @@ async def gethash(hash_q):
         await hash_q.reply(ans)
 
 
-@kyy_cmd(pattern="base64 (en|de) (.*)")
+@joo_cmd(pattern="base64 (en|de) (.*)")
 async def endecrypt(query):
     """ For .base64 command, find the base64 encoding of the given string. """
     if query.pattern_match.group(1) == "en":
