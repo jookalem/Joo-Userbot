@@ -22,10 +22,10 @@ from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeVideo
 
 from userbot import LOGS, CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, CMD_HANDLER as cmd
-from userbot.utils import progress, humanbytes, edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import progress, humanbytes, edit_or_reply, edit_delete, joo_cmd
 
 
-@kyy_cmd(pattern="download(?: |$)(.*)")
+@joo_cmd(pattern="download(?: |$)(.*)")
 async def download(target_file):
     """ For .download command, download files to the userbot's server. """
     await edit_delete(target_file, "Processing ...")
@@ -102,7 +102,7 @@ async def download(target_file):
                           "Reply to a message to download to my local server.")
 
 
-@kyy_cmd(pattern="uploadir (.*)")
+@joo_cmd(pattern="uploadir (.*)")
 async def uploadir(udir_event):
     """ For .uploadir command, allows you to upload everything from a folder in the server"""
     input_str = udir_event.pattern_match.group(1)
@@ -178,7 +178,7 @@ async def uploadir(udir_event):
         await edit_delete(udir_delete, "404: Directory Not Found")
 
 
-@kyy_cmd(pattern="upload (.*)")
+@joo_cmd(pattern="upload (.*)")
 async def upload(u_event):
     """ For .upload command, allows you to upload a file from the userbot's server """
     await edit_delete(u_event, "Processing ...")
@@ -254,7 +254,7 @@ def extract_w_h(file):
         return width, height
 
 
-@kyy_cmd(pattern="uploadas(stream|vn|all) (.*)")
+@joo_cmd(pattern="uploadas(stream|vn|all) (.*)")
 async def uploadas(uas_event):
     """ For .uploadas command, allows you to specify some arguments for upload. """
     await edit_delete(uas_event, "Processing ...")
