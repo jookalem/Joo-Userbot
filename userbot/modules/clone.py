@@ -10,24 +10,24 @@ from telethon.tl.types import InputPhoto
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, LOGS, STORAGE
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 
 if not hasattr(STORAGE, "userObj"):
     STORAGE.userObj = False
 
 
-@kyy_cmd(pattern=r"clone ?(.*)")
+@joo_cmd(pattern=r"clone ?(.*)")
 async def impostor(event):
     inputArgs = event.pattern_match.group(1)
 
     if "restore" in inputArgs:
-        await event.edit("**Kembali ke identitas asli...**")
+        await event.edit("**Kembali Ke Identitas Asli...**")
         if not STORAGE.userObj:
             return await event.edit(
-                "**Anda harus mengclone orang dulu sebelum kembali!**"
+                "**Anda Harus Mengclone Orang Xulu Sebelum Kembali!**"
             )
         await updateProfile(STORAGE.userObj, restore=True)
-        return await event.edit("**Berhasil Mengembalikan Akun Anda dari clone**")
+        return await event.edit("**Berhasil Mengembalikan Akun Anda Dari clone**")
     if inputArgs:
         try:
             user = await event.client.get_entity(inputArgs)
@@ -47,9 +47,9 @@ async def impostor(event):
 
     LOGS.info(STORAGE.userObj)
 
-    await event.edit("**Mencuri identitas orang ini...**")
+    await event.edit("**Mencuri Identitas Orang Ini...**")
     await updateProfile(userObj)
-    await event.edit("**Aku adalah kamu dan kamu adalah aku. asekk 🤪**")
+    await event.edit("**Aku Adalah Kamu Dan Kamu Adalah Aku. Asekk 🤪**")
 
 
 async def updateProfile(userObj, restore=False):
