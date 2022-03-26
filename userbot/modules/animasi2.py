@@ -1179,7 +1179,7 @@ async def moon(event):
         return
 
 
-@kyy_cmd(pattern=r"^\.earth$")
+@joo_cmd(pattern=r"^\.earth$")
 async def earth(event):
     deq = deque(list("🌏🌍🌎🌎🌍🌏🌍🌎"))
     try:
