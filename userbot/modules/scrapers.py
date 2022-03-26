@@ -1270,7 +1270,7 @@ async def parseqr(qr_e):
     await qr_e.edit(qr_contents)
 
 
-@kyy_cmd(pattern="barcode(?: |$)([\\s\\S]*)")
+@joo_cmd(pattern="barcode(?: |$)([\\s\\S]*)")
 async def bq(event):
     """ For .barcode command, genrate a barcode containing the given content. """
     await event.edit("`Processing..`")
