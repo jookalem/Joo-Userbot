@@ -7,7 +7,7 @@ import asyncio
 import time
 from justwatch import JustWatch
 from telethon import *
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot import CMD_HELP, bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HANDLER as cmd
 from telethon import events
 from telethon.tl import functions
@@ -87,7 +87,7 @@ if 1 == 1:
     client = bot
 
 
-@kyy_cmd(pattern="app(?: |$)(.*)")
+@joo_cmd(pattern="app(?: |$)(.*)")
 async def apk(e):
     try:
         app_name = e.pattern_match.group(1)
@@ -132,7 +132,7 @@ async def apk(e):
         await e.edit("Exception Occured:- " + str(err))
 
 
-@kyy_cmd(pattern="undlt(?: |$)(.*)")
+@joo_cmd(pattern="undlt(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -147,7 +147,7 @@ async def _(event):
         await event.delete()
 
 
-@kyy_cmd(pattern="calc(?: |$)(.*)")
+@joo_cmd(pattern="calc(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -181,7 +181,7 @@ async def _(event):
         await event.edit("use .calc help")
 
 
-@kyy_cmd(pattern="xcd(?: |$)(.*)")
+@joo_cmd(pattern="xcd(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -228,7 +228,7 @@ Year: {}""".format(img, input_str, xkcd_link, safe_title, alt, day, month, year)
         await event.edit("xkcd n.{} not found!".format(xkcd_id))
 
 
-@kyy_cmd(pattern="remove(?: |$)(.*)")
+@joo_cmd(pattern="remove(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -376,7 +376,7 @@ async def ban_user(chat_id, i, rights):
         return False, str(exc)
 
 
-@kyy_cmd(pattern="rnupload(?: |$)(.*)")
+@joo_cmd(pattern="rnupload(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -420,7 +420,7 @@ async def _(event):
         await event.edit("Syntax // .rnupload filename.extension as reply to a Telegram media")
 
 
-@kyy_cmd(pattern="grab(?: |$)(.*)")
+@joo_cmd(pattern="grab(?: |$)(.*)")
 async def potocmd(event):
     """Gets the profile photos of replied users, channels or chats"""
     id = "".join(event.raw_text.split(maxsplit=2)[1:])
@@ -453,7 +453,7 @@ async def potocmd(event):
             return
 
 
-@kyy_cmd(pattern="res(?: |$)(.*)")
+@joo_cmd(pattern="res(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -608,7 +608,7 @@ def get_provider(url):
     return url
 
 
-@kyy_cmd(pattern="watch(?: |$)(.*)")
+@joo_cmd(pattern="watch(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -655,7 +655,7 @@ async def _(event):
 # Modified by :- @kirito6969,@deleteduser420
 
 
-@kyy_cmd(pattern="weeb(?: |$)(.*)")
+@joo_cmd(pattern="weeb(?: |$)(.*)")
 async def weebify(event):
 
     args = event.pattern_match.group(1)
@@ -702,7 +702,7 @@ boldfont = [
     '𝘇']
 
 
-@kyy_cmd(pattern="^.bold(?: |$)(.*)")
+@joo_cmd(pattern="^.bold(?: |$)(.*)")
 async def thicc(bolded):
 
     args = bolded.pattern_match.group(1)
@@ -749,7 +749,7 @@ medievalbold = [
     '𝖟']
 
 
-@kyy_cmd(pattern="medbold(?: |$)(.*)")
+@joo_cmd(pattern="medbold(?: |$)(.*)")
 async def mediv(medievalx):
 
     args = medievalx.pattern_match.group(1)
@@ -796,7 +796,7 @@ doublestruckt = [
     '𝕫']
 
 
-@kyy_cmd(pattern="doublestruck(?: |$)(.*)")
+@joo_cmd(pattern="doublestruck(?: |$)(.*)")
 async def doublex(doublestrucktx):
 
     args = doublestrucktx.pattern_match.group(1)
@@ -843,7 +843,7 @@ cursiveboldx = [
     '𝔃']
 
 
-@kyy_cmd(pattern="curbold(?: |$)(.*)")
+@joo_cmd(pattern="curbold(?: |$)(.*)")
 async def cursive2(cursivebolded):
 
     args = cursivebolded.pattern_match.group(1)
@@ -891,7 +891,7 @@ medival2 = [
     '𝔷']
 
 
-@kyy_cmd(pattern="medi(?: |$)(.*)")
+@joo_cmd(pattern="medi(?: |$)(.*)")
 async def medival22(medivallite):
 
     args = medivallite.pattern_match.group(1)
@@ -938,7 +938,7 @@ cursive = [
     '𝓏']
 
 
-@kyy_cmd(pattern="cur(?: |$)(.*)")
+@joo_cmd(pattern="cur(?: |$)(.*)")
 async def xcursive(cursivelite):
 
     args = cursivelite.pattern_match.group(1)
@@ -978,7 +978,7 @@ CMD_HELP.update({
 \n↳ : Mengetahui Detail Tentang Film.\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}weeb` <text>\
 \n↳ : Teks Weebify.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: Ketik (`.bold <Teks>`,`.cur <Teks>`,`.curbold <Teks>`,`.medi <Teks>`,`.medbold <Teks>`,`.doublestruck <Teks>`)\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: Ketik (`{cmd}bold <Teks>`,`{cmd}cur <Teks>`,`{cmd}curbold <Teks>`,`{cmd}medi <Teks>`,`{cmd}medbold <Teks>`,`{cmd}doublestruck <Teks>`)\
 \n↳ : Buat Teks <Bold,Cursive,Cursivebold,Medival,Medivalbold,Gayishbold>\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}randompp`\
 \n↳ : Otomatis Mengganti Foto Profile Mu Untuk Stop ini Ketik .restart.\
