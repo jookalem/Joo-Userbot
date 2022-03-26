@@ -1,10 +1,10 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import bot, CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 from asyncio.exceptions import TimeoutError
 
 
-@kyy_cmd(pattern="sg(?: |$)(.*)")
+@joo_cmd(pattern="sg(?: |$)(.*)")
 async def lastname(steal):
     if steal.fwd_from:
         return
@@ -18,7 +18,7 @@ async def lastname(steal):
     if message.sender.bot:
         await edit_delete(steal, "```Balas Ke Pesan Pengguna Yang Sebenarnya.```")
         return
-    xx = await edit_or_reply(steal, "```Mengambil Informasi Pengguna Tersebut, Mohon Menunggu..```")
+    xx = await edit_or_reply(steal, "```Lu Siapa Si Anjing Gua Kepo Ngentot..```")
     try:
         async with bot.conversation(chat) as conv:
             try:
