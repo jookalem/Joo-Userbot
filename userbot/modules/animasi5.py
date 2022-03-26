@@ -1,10 +1,10 @@
 # Edit By @pikyus1
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, joo_cmd
 
 
-@kyy_cmd(pattern='thanks(?: |$)(.*)')
+@joo_cmd(pattern='thanks(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "●▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬●\n"
@@ -17,7 +17,7 @@ async def typewriter(typew):
                         "●▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬●")
 
 
-@kyy_cmd(pattern='malam(?: |$)(.*)')
+@joo_cmd(pattern='malam(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "╔═╦═╦╗╔═╦══╦═╦══╗\n"
@@ -30,7 +30,7 @@ async def typewriter(typew):
                         "╚╩╩╩╩╩═╩╩╩╩╩╝")
 
 
-@kyy_cmd(pattern='rumah(?: |$)(.*)')
+@joo_cmd(pattern='rumah(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "**GAMBAR RUMAH**\n"
@@ -42,7 +42,7 @@ async def typewriter(typew):
                         "๑۩๑๑۩๑๑ ۩๑๑۩๑▓๑۩๑๑۩๑")
 
 
-@kyy_cmd(pattern='join(?: |$)(.*)')
+@joo_cmd(pattern='join(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "_/﹋\\_\n"
