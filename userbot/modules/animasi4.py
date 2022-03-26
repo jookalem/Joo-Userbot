@@ -1,6 +1,6 @@
 from time import sleep
 from userbot import CMD_HELP, bot, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, joo_cmd
 from telethon import events
 import asyncio
 
@@ -63,7 +63,7 @@ async def _(event):
             await event.edit(animation_chars[i % 32])
 
 
-@kyy_cmd(pattern='helikopter(?: |$)(.*)')
+@joo_cmd(pattern='helikopter(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "▬▬▬.◙.▬▬▬ \n"
@@ -84,7 +84,7 @@ async def typewriter(typew):
                         "╬═╬/ \\ \n")
 
 
-@kyy_cmd(pattern='tembak(?: |$)(.*)')
+@joo_cmd(pattern='tembak(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "_/﹋\\_\n"
@@ -94,7 +94,7 @@ async def typewriter(typew):
                         "\n**Mau Jadi Pacarku Gak?!**")
 
 
-@kyy_cmd(pattern='bundir(?: |$)(.*)')
+@joo_cmd(pattern='bundir(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "`Dadah Semuanya...`          \n　　　　　|"
@@ -113,7 +113,7 @@ async def typewriter(typew):
                         "　　　　　 Ｕ Ｕ\n")
 
 
-@kyy_cmd(pattern='awkwok(?: |$)(.*)')
+@joo_cmd(pattern='awkwok(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "────██──────▀▀▀██\n"
@@ -123,7 +123,7 @@ async def typewriter(typew):
                         "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok..`")
 
 
-@kyy_cmd(pattern='ular(?: |$)(.*)')
+@joo_cmd(pattern='ular(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "░░░░▓\n"
@@ -213,7 +213,7 @@ async def typewriter(typew):
                         "░░░░░░░░░░░░░░░░░░░\n")
 
 
-@kyy_cmd(pattern='y(?: |$)(.*)')
+@joo_cmd(pattern='y(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "‡‡‡‡‡‡‡‡‡‡‡‡▄▄▄▄\n"
@@ -253,7 +253,7 @@ async def typewriter(typew):
                         "┈┈┈┈┈┗┻┛┗┻┛┈┈┈┈\n")
 
 
-@kyy_cmd(pattern='ajg(?: |$)(.*)')
+@joo_cmd(pattern='ajg(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "╥━━━━━━━━╭━━╮━━┳\n"
@@ -264,7 +264,7 @@ async def typewriter(typew):
                         "╨━━┗┛┗┛━━┗┛┗┛━━┻\n")
 
 
-@kyy_cmd(pattern='bernyanyi(?: |$)(.*)')
+@joo_cmd(pattern='bernyanyi(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     typew = await edit_or_reply(typew, "**Ganteng Doang Gak Bernyanyi (ง˙o˙)ว**")
