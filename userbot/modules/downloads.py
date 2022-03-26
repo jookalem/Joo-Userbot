@@ -12,11 +12,11 @@ from youtube_dl.utils import (ContentTooShortError, DownloadError,
                               UnavailableVideoError, XAttrMetadataError)
 from youtubesearchpython import SearchVideos
 
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, joo_cmd
 from userbot import CMD_HANDLER as cmd, CMD_HELP
 
 
-@kyy_cmd(pattern="song (.*)")
+@joo_cmd(pattern="song (.*)")
 async def download_video(event):
     a = event.text
     if len(a) >= 5 and a[5] == "s":
@@ -123,7 +123,7 @@ Connected to server...
         pass
 
 
-@kyy_cmd(pattern="vsongs (.*)")
+@joo_cmd(pattern="vsongs (.*)")
 async def download_vsong(event):
     x = await edit_or_reply(event, "Processing..")
     url = event.pattern_match.group(1)
@@ -198,7 +198,7 @@ async def download_vsong(event):
     await x.delete()
 
 
-@kyy_cmd(pattern="lirik (.*)")
+@joo_cmd(pattern="lirik (.*)")
 async def original(event):
     if not event.pattern_match.group(1):
         return await edit_or_reply(event, "Beri Saya Sebuah Judul Lagu Untuk Mencari Lirik.\n**Contoh** : `{cmd}lirik` <Judul Lagu>")
