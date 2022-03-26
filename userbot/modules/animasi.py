@@ -1,9 +1,9 @@
 from time import sleep
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, joo_cmd
 
 
-@kyy_cmd(pattern='sadboy(?: |$)(.*)')
+@joo_cmd(pattern='sadboy(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
@@ -16,7 +16,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@kyy_cmd(pattern='punten(?: |$)(.*)')
+@joo_cmd(pattern='punten(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "`\n┻┳|―-∩`"
@@ -26,12 +26,12 @@ async def typewriter(typew):
                         "`\n┻┳|￣  )`"
                         "`\n┳ﾐ(￣ ／`"
                         "`\n┻┳T￣|`"
-                        "\n**Punten**")
+                        "\n**Punten Mamank**")
 
 # Create by myself @localheart
 
 
-@kyy_cmd(pattern='pantau(?: |$)(.*)')
+@joo_cmd(pattern='pantau(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "`\n┻┳|―-∩`"
@@ -41,13 +41,13 @@ async def typewriter(typew):
                         "`\n┻┳|￣  )`"
                         "`\n┳ﾐ(￣ ／`"
                         "`\n┻┳T￣|`"
-                        "\n**Masih Ku Pantau**")
+                        "\n**Masih Gua Pantau**")
 
 
 # Create by myself @localheart
 
 
-@kyy_cmd(pattern='idiot(?: |$)(.*)')
+@joo_cmd(pattern='idiot(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "\n╭╮╱╱╭╮"
