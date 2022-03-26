@@ -231,7 +231,7 @@ async def typewriter(typew):
                         "█████‡‡‡‡‡‡‡██████████\n")
 
 
-@kyy_cmd(pattern='tank(?: |$)(.*)')
+@joo_cmd(pattern='tank(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "█۞███████]▄▄▄▄▄▄▄▄▄▄▃ \n"
@@ -240,7 +240,7 @@ async def typewriter(typew):
                         "◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙◤\n")
 
 
-@kyy_cmd(pattern='babi(?: |$)(.*)')
+@joo_cmd(pattern='babi(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await edit_or_reply(typew, "┈┈┏━╮╭━┓┈╭━━━━╮\n"
