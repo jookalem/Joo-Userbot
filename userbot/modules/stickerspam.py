@@ -10,11 +10,11 @@ from telethon.tl import functions, types
 from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, CMD_HANDLER as cmd
 
 
-@kyy_cmd(pattern="sspam(?: |$)(.*)")
+@joo_cmd(pattern="sspam(?: |$)(.*)")
 async def stickerpack_spam(event):
     if event.fwd_from:
         return
