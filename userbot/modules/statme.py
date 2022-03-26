@@ -7,7 +7,7 @@ from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from telethon.tl.types import Channel, Chat, User
 
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, joo_cmd
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 
 logging.basicConfig(
@@ -16,7 +16,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-@kyy_cmd(pattern="stats(?: |$)(.*)")
+@joo_cmd(pattern="stats(?: |$)(.*)")
 async def stats(event: NewMessage.Event) -> None:  # pylint: disable = R0912, R0914, R0915
     """Command to get stats about the account"""
     xx = await edit_or_reply(event, '`Collecting stats, Wait Master`')
