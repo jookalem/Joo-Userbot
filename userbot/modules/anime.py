@@ -535,7 +535,7 @@ async def get_anime(message):
     await message.client.send_file(message.chat_id, file=main_poster, caption=captions)
 
 
-@kyy_cmd(pattern="smanga ?(.*)")
+@joo_cmd(pattern="smanga ?(.*)")
 async def manga(message):
     search_query = message.pattern_match.group(1)
     await message.get_reply_message()
