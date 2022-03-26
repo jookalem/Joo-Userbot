@@ -15,10 +15,10 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
 from userbot import CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 
 
-@kyy_cmd(pattern="info(?: |$)(.*)")
+@joo_cmd(pattern="info(?: |$)(.*)")
 async def who(event):
 
     x = await edit_or_reply(event,
@@ -149,5 +149,5 @@ async def fetch_info(replied_user, event):
 CMD_HELP.update({
     "info":
     f">`{cmd}info` <username> Atau Balas Ke Pesan Pengguna"
-    "\nUsage: Mendapatkan Informasi Pengguna."
+    "\nUsage: Untuk Mendapatkan Informasi Pengguna."
 })
