@@ -12,7 +12,7 @@ import aria2p
 from requests import get
 
 from userbot import CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY, CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 from userbot.utils import humanbytes
 
 
@@ -66,7 +66,7 @@ aria2 = aria2p.API(
 aria2.set_global_options({"dir": download_path})
 
 
-@kyy_cmd(pattern="amag(?: |$)(.*)")
+@joo_cmd(pattern="amag(?: |$)(.*)")
 async def magnet_download(event):
     magnet_uri = event.pattern_match.group(1)
     # Add Magnet URI Into Queue
@@ -82,7 +82,7 @@ async def magnet_download(event):
     await check_progress_for_dl(gid=new_gid, event=event, previous=None)
 
 
-@kyy_cmd(pattern="ator(?: |$)(.*)")
+@joo_cmd(pattern="ator(?: |$)(.*)")
 async def torrent_download(event):
     torrent_file_path = event.pattern_match.group(1)
     # Add Torrent Into Queue
@@ -96,7 +96,7 @@ async def torrent_download(event):
     await check_progress_for_dl(gid=gid, event=event, previous=None)
 
 
-@kyy_cmd(pattern="aurl(?: |$)(.*)")
+@joo_cmd(pattern="aurl(?: |$)(.*)")
 async def aurl_download(event):
     uri = [event.pattern_match.group(1)]
     try:  # Add URL Into Queue
@@ -112,7 +112,7 @@ async def aurl_download(event):
         await check_progress_for_dl(gid=new_gid, event=event, previous=None)
 
 
-@kyy_cmd(pattern="aclear(?: |$)(.*)")
+@joo_cmd(pattern="aclear(?: |$)(.*)")
 async def remove_all(event):
     try:
         removed = aria2.remove_all(force=True)
@@ -127,7 +127,7 @@ async def remove_all(event):
     await sleep(2.5)
 
 
-@kyy_cmd(pattern="apause(?: |$)(.*)")
+@joo_cmd(pattern="apause(?: |$)(.*)")
 async def pause_all(event):
     # Pause ALL Currently Running Downloads.
     await event.edit("`Pausing downloads...`")
@@ -137,7 +137,7 @@ async def pause_all(event):
     await sleep(2.5)
 
 
-@kyy_cmd(pattern="aresume(?: |$)(.*)")
+@joo_cmd(pattern="aresume(?: |$)(.*)")
 async def resume_all(event):
     await event.edit("`Resuming downloads...`")
     aria2.resume_all()
@@ -147,7 +147,7 @@ async def resume_all(event):
     await event.delete()
 
 
-@kyy_cmd(pattern="ashow(?: |$)(.*)")
+@joo_cmd(pattern="ashow(?: |$)(.*)")
 async def show_all(event):
     downloads = aria2.get_downloads()
     msg = ""
