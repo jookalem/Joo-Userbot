@@ -1,11 +1,11 @@
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 from userbot import CMD_HANDLER as cmd, CMD_HELP, bot
 
 
-@kyy_cmd(pattern="igsaver ?(.*)")
+@joo_cmd(pattern="igsaver ?(.*)")
 async def igsaver(event):
     if event.fwd_from:
         return
