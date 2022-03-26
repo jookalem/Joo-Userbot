@@ -10,7 +10,7 @@ import time
 from datetime import datetime
 # from sample_config import Config
 # from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
-from userbot.utils import kyy_cmd
+from userbot.utils import joo_cmd
 # from userbot.events import humanbytes, progress, time_formatter
 from userbot import CMD_HELP, GITHUB_ACCESS_TOKEN, GIT_REPO_NAME, bot, CMD_HANDLER as cmd
 
@@ -19,7 +19,7 @@ GIT_TEMP_DIR = "./userbot/temp/"
 # @borg.on(admin_cmd(pattern="commit ?(.*)", allow_sudo=True))
 
 
-@kyy_cmd(pattern="gcommit(?: |$)(.*)")
+@joo_cmd(pattern="gcommit(?: |$)(.*)")
 # @register(pattern=r".commit (.*)", outgoing=True)
 async def download(event):
     if event.fwd_from:
