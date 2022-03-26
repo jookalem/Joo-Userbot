@@ -4,11 +4,11 @@
 from PIL import Image
 import cv2
 import os
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, joo_cmd
 from userbot import CMD_HELP, bot
 
 
-@kyy_cmd(pattern="tiny(?: |$)(.*)")
+@joo_cmd(pattern="tiny(?: |$)(.*)")
 async def _(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
