@@ -111,7 +111,7 @@ async def autobot():
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"✪ ᴏᴡɴᴇʀ ~ {who.first_name} ✪\n\n✪ ᴘᴏᴡᴇʀᴇᴅ ɴʏ ~ @ProjectJoni ✪"
+                bf, f"✪ ᴏᴡɴᴇʀ ~ {who.first_name} ✪\n\n✪ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ~ @ProjectJoni ✪"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
@@ -153,7 +153,7 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✪ ᴏᴡɴᴇʀ ~ {who.first_name} ✪\n\n✪ ᴘᴏᴡᴇʀᴇᴅ ɴʏ ~ @ProjectJoni ✪"
+            bf, f"✪ ᴏᴡɴᴇʀ ~ {who.first_name} ✪\n\n✨ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ~ @ProjectJoni ✨"
         )
         await bot.send_message(
             BOTLOG_CHATID,
