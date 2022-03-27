@@ -8,6 +8,8 @@ from userbot.utils import joo_cmd
 import random
 from userbot import owner
 from telethon.tl.types import InputMessagesFilterVideo
+from telethon.tl.types import InputMessagesFilterVoice
+from telethon.tl.types import InputMessagesFilterPhotos
 
 
 @joo_cmd(pattern="asupan$")
