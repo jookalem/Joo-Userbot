@@ -1,13 +1,14 @@
 import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot.events import register
-from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
+from userbot.utils import joo_cmd
+from userbot import bot, TEMP_DOWNLOAD_DIRECTORY
+from userbot import CMD_HELP, CMD_HANDLER as cmd
 
 
-@register(outgoing=True, pattern=r'^.jurus(:? |$)([1-8])?')
+@joo_cmd(pattern=r"jurus(:? |$)([1-8])?")
 async def _(fry):
-    await fry.edit("`Muka udh jelek, Gua acak acak lagi ah...😋`")
+    await fry.edit("`Muka udah jelek, Gua acak acak lagi ngentod..`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
@@ -67,7 +68,7 @@ async def _(fry):
     return os.remove(downloaded_file_name)
 
 
-@register(outgoing=True, pattern=r'^.df(:? |$)([1-8])?')
+@joo_cmd(pattern=r"juruss(:? |$)([1-8])?")
 async def _(fry):
     await fry.edit("`Sedang Dalam Proses......`")
     level = fry.pattern_match.group(2)
@@ -131,13 +132,13 @@ async def _(fry):
 
 CMD_HELP.update({
     "jurus":
-    "`.jurus` or `.jurus` [level(1-8)]"
-    "\nUsage: untuk mengubah foto/sticker."
+    "`{cmd}jurus` or `{cmd}jurus` [level(1-8)]"
+    "\nUsage: untuk mengubah foto/sticker menjadi hina."
 })
 
 
 CMD_HELP.update({
-    "jurus":
-    "`.jurus` or `.jurus` [level(1-8)]"
-    "\nUsage: untuk mengubah foto/sticker."
+    "jurus2":
+    "`{cmd}juruss` or `{cmd}juruss` [level(1-8)]"
+    "\nUsage: untuk mengubah foto/sticker menjadi hina."
 })
