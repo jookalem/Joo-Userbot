@@ -1,22 +1,42 @@
-# OWN MY CODE RENDY
-# Credits Rendy
+# Credits @renprx
+# FROM https://randi356.github.io/Vegeta-Userbot
 
 """ Userbot module containing commands related to the \
     Information Superhighway (yes, Internet). """
 
 import random
+import time
+
+
+from datetime import datetime
+
+from userbot import (
+    DEVS, 
+    StartTime,
+)
+    
 from userbot.events import register
 
-# OWN BY RENDY CODE
 # CPING
 
 cping = [
-    "**Hadir, cping** `100.789` ",
-    "**Hadir, speed** `678.999` ",
-    "**Hadir, boosted** `567.987` ",
-    "**Hadir, pingers power** `789.654` ",
+    "**Hadir, Pingers** `101.678` ",
+    "**Hadir Speed** `999.999` ",
+    "**Hadir, Boosted** `567.765` ",
+    "**Hadir, Pingers Power** `789.212` ",
 ]
 
+brb = [
+    "**Sial Lord Joo!😈** ",
+    "**Siap Lord!🙏** ",
+    "**See U Next Time Lord!🤗** ",
+]
+
+afk = [
+    "**Laporan Di Terima Lord!👿**! ",
+    "**Baik Lord**!🙏 ",
+    "**Fuck You Joo!🤪** ",
+]
 
 async def get_readable_time(seconds: int) -> str:
     count = 0
@@ -45,6 +65,15 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(incoming=True, from_users=860951678, pattern=r"^.cping$")
-async def _(rendy):
-    await kyy.reply(random.choice(cping))
+@register(incoming=True, from_users=DEVS, pattern=r"^.cping$")
+async def _(joo):
+    await joo.reply(random.choice(cping))
+    
+
+@register(incoming=True, from_users=DEVS, pattern=r"^brb$")
+async def _(joo):
+    await joo.reply(random.choice(brb))
+                      
+@register(incoming=True, from_users=DEVS, pattern=r"^afk$")
+async def _(joo):
+    await joo.reply(random.choice(afk))
