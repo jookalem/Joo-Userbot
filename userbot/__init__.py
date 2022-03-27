@@ -159,7 +159,7 @@ PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", None)
 
 # Custom Pmpermit pic
 PMPERMIT_PIC = os.environ.get(
-    "PMPERMIT_PIC") or "https://telegra.ph/file/9149e552a367cbfe934b4.jpg"
+    "PMPERMIT_PIC") or "https://telegra.ph/file/9afc060ca553fb30ba101.jpg"
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
@@ -297,7 +297,7 @@ ALIVE_LOGO = os.environ.get(
 
 # Default .helpme Logo
 INLINE_PIC = os.environ.get(
-    "INLINE_PIC") or "https://telegra.ph/file/9149e552a367cbfe934b4.jpg"
+    "INLINE_PIC") or "https://telegra.ph/file/9afc060ca553fb30ba101.jpg"
 
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "ރ"
