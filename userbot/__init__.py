@@ -257,7 +257,7 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .kyyalive
-KYY_TEKS_KUSTOM = os.environ.get("KYY_TEKS_KUSTOM", "I'am Using Kyy-Userbot✨")
+KYY_TEKS_KUSTOM = os.environ.get("KYY_TEKS_KUSTOM", "I'am Using Joo-Userbot✨")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -293,7 +293,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/9149e552a367cbfe934b4.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/9afc060ca553fb30ba101.jpg"
 
 # Default .helpme Logo
 INLINE_PIC = os.environ.get(
@@ -563,7 +563,7 @@ with bot:
         uid = user.id
         owner = user.first_name
         logo = ALIVE_LOGO
-        kyylogo = ALIVE_LOGO
+        joologo = ALIVE_LOGO
         tgbotusername = BOT_USERNAME
         BTN_URL_REGEX = re.compile(
             r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)"
@@ -578,7 +578,7 @@ with bot:
                 text = f"**✨ ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
-                    file=kyylogo,
+                    file=joologo,
                     buttons=buttons,
                     link_preview=False,
                 )
@@ -665,7 +665,7 @@ with bot:
             if event.query.user_id == uid and query.startswith("@JooUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
-                    file=kyylogo,
+                    file=joologo,
                     link_preview=False,
                     text=f"**✨ ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=buttons,
