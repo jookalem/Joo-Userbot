@@ -103,7 +103,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#BOT \n" "`Kyy-Userbot Berhasil Di Update`"
+                BOTLOG_CHATID, "#BOT \n" "`Joo-Userbot Berhasil Di Update`"
             )
 
     else:
@@ -232,9 +232,7 @@ async def upstream(event):
         await xx.edit("` Proses Update ✨ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ✨, Loading....35%`")
         await xx.edit("` Proses Update ✨ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ✨, Loading....77%`")
         await xx.edit("` Proses Update ✨ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ✨, Updating...90%`")
-        await xx.edit(
-            "` Proses Update ✨ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ✨, Mohon Tunggu Sebentar....100%`"
-        )
+        await xx.edit("` Proses Update ✨ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ✨, Mohon Tunggu Sebentar....100%`")
 
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
