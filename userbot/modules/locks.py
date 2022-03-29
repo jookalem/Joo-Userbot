@@ -92,7 +92,7 @@ async def locks(event):
         await event.client(
             EditChatDefaultBannedRightsRequest(peer=peer_id,
                                                banned_rights=lock_rights))
-        await event.edit(f"`Mampus Anak Anjing Gua {what} Obrolan Ini`")
+        await event.edit(f"`Mampus Anak Anjing Gua Kunci {what} Obrolan Ini`")
     except BaseException as e:
         await event.edit(
             f"`Apakah Anda Mempunyai Izin Melakukan Itu Disini ?`\n**Kesalahan:** {str(e)}")
