@@ -824,7 +824,6 @@ with bot:
                         modul_name
                     )
                 )
-
             else:
                 reply_pop_up_alert = f"Kamu Tidak Diizinkan, Ini Userbot Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
