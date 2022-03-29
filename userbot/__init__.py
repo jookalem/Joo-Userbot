@@ -824,9 +824,7 @@ with bot:
                         modul_name
                     )
                 )
-                await event.edit(
-                    reply_pop_up_alert, buttons=[Button.inline("Back", data="reopen")]
-                )
+
             else:
                 reply_pop_up_alert = f"Kamu Tidak Diizinkan, Ini Userbot Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
