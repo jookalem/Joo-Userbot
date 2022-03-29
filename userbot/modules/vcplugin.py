@@ -510,7 +510,7 @@ async def leavevc(event):
     """ leave video chat """
     xnxx = await edit_or_reply(event, "Processing")
     chat_id = event.chat_id
-    vcmention(event.sender)
+    from_user = vcmention(event.sender)
     if from_user:
         try:
             await call_py.leave_group_call(chat_id)
