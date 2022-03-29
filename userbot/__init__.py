@@ -778,7 +778,9 @@ with bot:
                     "𓆩 **ʜᴇʟᴘ ᴍᴏᴅᴇ ʙᴜᴛᴛᴏɴ ᴅɪᴛᴜᴛᴜᴘ!** 𓆪", buttons=openlagi
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak Diizinkan, Ini Userbot Milik {owner}"
+                reply_pop_up_alert = (
+                    f"Kamu Tidak Diizinkan, Ini Userbot Milik {owner}"
+                )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
