@@ -530,11 +530,11 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "««", data="{}_prev({})".format(prefix, modulo_page)
+                    "⋞", data="{}_prev({})".format(prefix, modulo_page)
                 ),
-                custom.Button.inline("Tutup", b"close"),
+                custom.Button.inline("ᴛᴜᴛᴜᴘ", b"close"),
                 custom.Button.inline(
-                    "»»", data="{}_next({})".format(prefix, modulo_page)
+                    "⋟", data="{}_next({})".format(prefix, modulo_page)
                 ),
             )
         ]
@@ -574,7 +574,7 @@ with bot:
                 current_page_number = int(looters)
                 buttons = paginate_help(
                     current_page_number, dugmeler, "helpme")
-                text = f"**✨ ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ ✨**\n\nㅊ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\nㅊ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷**\n\nㅊ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\nㅊ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
                     file=joologo,
@@ -666,20 +666,20 @@ with bot:
                 result = await event.builder.photo(
                     file=joologo,
                     link_preview=False,
-                    text=f"**✨ ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ ✨**\n\nㅊ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\nㅊ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
+                    text=f"**🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷**\n\nㅊ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\nㅊ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Joo - Userbot",
+                    description="Repository 🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷",
                     url="https://t.me/JoniSupport",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text="**Joo-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [ᴊᴏᴏ](https://t.me/ikhsanntarjo)\n✣ **sᴜᴘᴘᴏʀᴛ :** @JoniSupport\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Joo-Userbot](https://github.com/jookalem/Joo-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [ᴊᴏᴏ](https://t.me/ikhsanntarjo)\n✣ **sᴜᴘᴘᴏʀᴛ :** @JoniSupport\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [ᴊσσ-υѕᴇʀвσт](https://github.com/jookalem/Joo-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -726,7 +726,7 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="✨ ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ ✨",
+                    title="🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷",
                     description="Joo - Userbot | Telethon",
                     url="https://t.me/ProjectJoni",
                     thumb=InputWebDocument(
@@ -734,7 +734,7 @@ with bot:
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**Joo-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @ProjectJoni\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @ProjectJoni\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -773,9 +773,9 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
                 openlagi = custom.Button.inline(
-                    "• Re-Open Menu •", data="reopen")
+                    "↪ ʙᴜᴋᴀ ᴍᴇɴᴜ ᴋᴇᴍʙᴀʟɪ ↫", data="reopen")
                 await event.edit(
-                    "𓆩 **ʜᴇʟᴘ ᴍᴏᴅᴇ ʙᴜᴛᴛᴏɴ ᴅɪᴛᴜᴛᴜᴘ!** 𓆪", buttons=openlagi
+                    "↪ **ʜᴇʟᴘ ᴍᴏᴅᴇ ʙᴜᴛᴛᴏɴ ᴅɪᴛᴜᴛᴜᴘ!** ↫", buttons=openlagi
                 )
             else:
                 reply_pop_up_alert = (
