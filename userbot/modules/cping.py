@@ -27,15 +27,15 @@ cping = [
 ]
 
 brb = [
-    "**Sial Lord Joo!😈** ",
+    "**Siap Lord Joo!😈** ",
     "**Siap Lord!🙏** ",
-    "**See U Next Time Lord!🤗** ",
+    "**Siap Owner Ganteng!🤗** ",
 ]
 
 afk = [
     "**Laporan Di Terima Lord!👿**! ",
     "**Baik Lord**!🙏 ",
-    "**Fuck You Joo!🤪** ",
+    "**Fvck You Joo!**😖",
 ]
 
 async def get_readable_time(seconds: int) -> str:
