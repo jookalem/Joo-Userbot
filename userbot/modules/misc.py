@@ -57,7 +57,7 @@ async def sleepybot(time):
 @joo_cmd(pattern="shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await edit_or_reply(event, "`Mematikan Joo-Userbot....`")
+    await edit_or_reply(event, "`Mematikan 🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
@@ -73,7 +73,7 @@ async def killdabot(event):
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`Joo-Userbot Telah Di Restart`")
+                                        "`🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷 Telah Di Restart`")
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
     execle(sys.executable, *args, environ)
@@ -82,10 +82,10 @@ async def killdabot(event):
 @joo_cmd(pattern="readme$")
 async def reedme(e):
     await edit_or_reply(e,
-                        "Here's Something for You to Read :\n"
-                        "\n[✨ Joni-Userbot Repo](https://github.com/jookalem/Joo-Userbot/blob/Joo-Userbot/README.md)"
-                        "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
-                        "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
+                        "ʜᴇʀᴇ's sᴏᴍᴇᴛʜɪɴɢ ғᴏʀ ʏᴏᴜ ᴛᴏ ʀᴇᴀᴅ :\n"
+                        "\n[🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷](https://github.com/jookalem/Joo-Userbot/blob/Joo-Userbot/README.md)"
+                        "\n[✪ sᴇᴛᴜᴘ ɢᴜɪᴅᴇ - ʙᴀsɪᴄ](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
+                        "\n[✪ ᴘᴇᴄɪᴀʟ - ɴᴏᴛᴇ](https://telegra.ph/Special-Note-11-02)")
 
 
 @joo_cmd(pattern="repeat (.*)")
@@ -106,14 +106,14 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await edit_or_reply(wannasee,
-                        "**Hey**, I am using **✨ᴊᴏᴏ-ᴜѕᴇʀʙᴏᴛ✨** \n"
-                        "❖━━━━━━━━━━━•✧•━━━━━━━━━━━❖\n"
-                        "➻ **Repo Userbot :** [ɢɪᴛʜᴜʙ](https://github.com/jookalem/Joo-Userbot)\n"
-                        "➻ **Owner Bot :** [ᴊσσ](t.me/IDnyaKosong)\n"
-                        "❖━━━━━━━━━━━•✧•━━━━━━━━━━━❖\n"
-                        "➻ **Support :** [sᴜᴘᴘσʀᴛ](https://t.me/JoniSupport)\n"
-                        "➻ **Channel :** [ᴄʜᴀɴɴᴇʟ](https://t.me/ProjectJoni)\n"
-                        "❖━━━━━━━━━━━•✧•━━━━━━━━━━━❖\n"
+                        "ʜᴇʏ, ɪ'ᴍ ᴜsɪɴɢ **🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷** \n"
+                        "❖━━━━━•✧•━━━━━•✧•━━━━━•✧•━━━━━❖\n"
+                        "✪ **𝐑ᴇᴘᴏ 𝐔sᴇʀʙᴏᴛ :** [𝐆ɪᴛʜᴜʙ](https://github.com/jookalem/Joo-Userbot)\n"
+                        "✪ **𝐎ᴡɴᴇʀ 𝐑ᴇᴘᴏ  :** [𝐈ᴋʜsᴀɴ](t.me/IDnyaKosong)\n"
+                        "❖━━━━━•✧•━━━━━•✧•━━━━━•✧•━━━━━❖\n"
+                        "✪ **𝐒ᴜᴘᴘᴏʀᴛ :** [𝐆ʀᴜᴘ 𝐒ᴜᴘᴘᴏʀᴛ](https://t.me/JoniSupport)\n"
+                        "✪ **𝐂ʜᴀɴɴᴇʟ :** [𝐂ʜᴀɴɴᴇʟ 𝐔ᴘᴅᴀᴛᴇs](https://t.me/ProjectJoni)\n"
+                        "❖━━━━━•✧•━━━━━•✧•━━━━━•✧•━━━━━❖\n"
                         )
 
 
@@ -272,19 +272,19 @@ CMD_HELP.update({
     \n↳ : Dapatkan item acak dari daftar item.",
     "sleep": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}sleep <seconds>`\
     \n↳ : `{cmd}sleep`\
-    \n  •  **Function : Biarkan Joo-Userbot tidur selama beberapa detik.",
+    \n  •  **Function : Biarkan 🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷 tidur selama beberapa detik.",
     "shutdown": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}shutdown`\
     \n↳ : Mematikan bot",
     "repo": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}repo`\
-    \n↳ : Menampilan link Repository Joo-Userbot.",
+    \n↳ : Menampilan link Repository 🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷.",
     "string": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}string`\
-    \n↳: Menampilkan link String Joo-Userbot",
+    \n↳: Menampilkan link String 🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷",
     "readme": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `{cmd}readme`\
     \n↳ : Menyediakan tautan untuk mengatur userbot dan modulnya.",
     "repeat": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}repeat <no> <text>`\
     \n↳ : Mengulangi teks untuk beberapa kali. Jangan bingung ini dengan spam tho.",
     "restart": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}restart`\
-    \n↳ : Merestart Joo-Userbot",
+    \n↳ : Merestart 🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷",
     "raw": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}raw`\
     \n↳ : Dapatkan data berformat seperti JSON terperinci tentang pesan yang dibalas.",
 })
