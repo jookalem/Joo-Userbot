@@ -121,7 +121,7 @@ async def repo_is_here(wannasee):
 async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
     await edit_or_reply(wannasee,
-                        f"➻ **DAPATKAN STRING SESSION VIA BOT    :** [KLIK DISINI](https://t.me/StringManRobot)\n"
+                        f"➻ **DAPATKAN STRING SESSION VIA BOT :** [KLIK DISINI](https://t.me/StringManRobot)\n"
                         )
 
 
