@@ -41,14 +41,14 @@ CUSTOM_TEXT = str(
     PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Hi Bro, Saya Bot Yang Menjaga Room Chat Joo-Userbot {owner} Di Mohon Jangan Melakukan Spam, Jika Anda Melakukan Itu OTOMATIS Saya Akan Memblockir Anda!__ \n"
 DEF_UNAPPROVED_MSG = (
     "╔═════════════════════╗\n"
-    "    ⚡ 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 ⚡ \n"
+    "     ⚡ 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 ⚡ \n"
     "╚═════════════════════╝\n"
     "ᴛᴏʟᴏɴɢ ᴊᴀɴɢᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ ᴄʜᴀᴛ ᴘᴀᴅᴀ ᴛᴜᴀɴ sᴀʏᴀ \n"
     f"sᴀʏᴀ ᴀᴋᴀɴ ᴍᴇᴍʙʟᴏᴋɪʀ ᴀɴᴅᴀ ᴊɪᴋᴀ ᴀɴᴅᴀ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ \n"
     f"ᴛᴜɴɢɢᴜ sᴀᴍᴘᴀɪ ᴛᴜᴀɴ ᴍᴇɴᴇʀɪᴍᴀ ᴘᴇsᴀɴ ᴋᴀᴍᴜ \n"
     "╔═════════════════════╗\n"
-    f"➠ 𝗢𝘄𝗻𝗲𝗿 : {owner} \n"
-    f"➠ 𝗣𝗲𝘀𝗮𝗻 𝗢𝘁𝗼𝗺𝗮𝘁𝗶𝘀 𝗯𝘆 𝗝𝗼𝗼-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n"
+    f"✪ 𝗢𝘄𝗻𝗲𝗿 : {owner} \n"
+    f"✪ 𝗣𝗲𝘀𝗮𝗻 𝗢𝘁𝗼𝗺𝗮𝘁𝗶𝘀 𝗯𝘆 𝗝𝗼𝗼-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n"
     "╚═════════════════════╝")
 # =================================================================
 
