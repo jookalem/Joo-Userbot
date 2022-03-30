@@ -14,6 +14,8 @@ import heroku3
 from telethon.tl.functions.contacts import UnblockRequest
 from telethon.tl.functions.channels import (
     CreateChannelRequest,
+    EditPhotoRequest,
+    EditAdminRequest
 )
 from telethon.tl.types import (
     ChatAdminRights,
