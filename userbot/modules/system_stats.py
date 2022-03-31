@@ -160,7 +160,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**✨Joo-Userbot✨ Versi:** \n "
+            "**⚜-**🥷ᴊσσ-ᴜѕᴇʀвσт🥷 Versi:** \n "
             f"heads/Joo-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
@@ -224,16 +224,16 @@ async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"┍━━━━━━━━━☽【❖】☾━━━━━━━┑ \n"
+        f"┍━━━━━━━━━━☽【❖】☾━━━━━━━━┑ \n"
         f"᯽ ➛ **ɴᴀᴍᴇ :** [{user.first_name}](tg://user?id={user.id}) \n"
         f"᯽ ➛ **ᴜsᴇʀɴᴀᴍᴇ :** @{user.username} \n"
         f"᯽ ➛ **ᴛᴇʟᴇᴛʜᴏɴ :** `{version.__version__}` \n"
         f"᯽ ➛ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{python_version()}` \n"
-        f"᯽ ➛ **ᴘʏᴛɢᴄᴀʟʟs ᴠᴇʀsɪᴏɴ :** `{pytgcalls.__version__}` \n"
+        f"᯽ ➛ **ᴘʏᴛɢᴄᴀʟʟs :** `{pytgcalls.__version__}` \n"
         f"᯽ ➛ **ʙᴏᴛ ᴠᴇʀsɪᴏɴ :** `{BOT_VER}` \n"
         f"᯽ ➛ **ᴍᴏᴅᴜʟᴇs :** `{len(modules)}` ᴍᴏᴅᴜʟᴇs \n"
-        f"┕━━━━━━━━━☽【❖】☾━━━━━━━┙ \n"
-        f"     **[ɢʀᴏᴜᴘꜱ](https://t.me/JoniSupport)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/ProjectJoni)** | **[ᴏᴡɴᴇʀ](https://t.me/ikhsanntarjo)** | **[ɢɪᴛʜᴜʙ](https://github.com/jookalem/Joo-Userbot)**"
+        f"┕━━━━━━━━━━☽【❖】☾━━━━━━━━┙ \n"
+        f"      **[ɢʀᴏᴜᴘꜱ](https://t.me/JoniSupport)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/ProjectJoni)** | **[ᴏᴡɴᴇʀ](https://t.me/ikhsanntarjo)** | **[ɢɪᴛʜᴜʙ](https://github.com/jookalem/Joo-Userbot)**"
     )
     if ALIVE_LOGO:
         try:
