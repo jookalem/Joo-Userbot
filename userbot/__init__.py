@@ -282,7 +282,7 @@ BITLY_TOKEN = os.environ.get(
 TERM_ALIAS = os.environ.get("TERM_ALIAS", "Joo-Userbot")
 
 # Bot Version
-BOT_VER = os.environ.get("BOT_VER", "3.1.5")
+BOT_VER = os.environ.get("BOT_VER", "3.1.7")
 
 # Default .alive Username
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
