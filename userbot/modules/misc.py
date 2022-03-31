@@ -57,7 +57,7 @@ async def sleepybot(time):
 @joo_cmd(pattern="shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await edit_or_reply(event, "`Mematikan 🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷`")
+    await edit_or_reply(event, "`Mematikan 🥷ᴊσσ-ᴜѕᴇʀвσт🥷`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
@@ -73,7 +73,7 @@ async def killdabot(event):
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷 Telah Di Restart`")
+                                        "`🥷ᴊσσ-ᴜѕᴇʀвσт🥷 Telah Di Restart`")
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
     execle(sys.executable, *args, environ)
@@ -83,7 +83,7 @@ async def killdabot(event):
 async def reedme(e):
     await edit_or_reply(e,
                         "ʜᴇʀᴇ's sᴏᴍᴇᴛʜɪɴɢ ғᴏʀ ʏᴏᴜ ᴛᴏ ʀᴇᴀᴅ :\n"
-                        "\n[🥷 ᴊσσ-ᴜѕᴇʀвσт 🥷](https://github.com/jookalem/Joo-Userbot/blob/Joo-Userbot/README.md)"
+                        "\n[🥷ᴊσσ-ᴜѕᴇʀвσт🥷](https://github.com/jookalem/Joo-Userbot/blob/Joo-Userbot/README.md)"
                         "\n[✪ sᴇᴛᴜᴘ ɢᴜɪᴅᴇ - ʙᴀsɪᴄ](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
                         "\n[✪ ᴘᴇᴄɪᴀʟ - ɴᴏᴛᴇ](https://telegra.ph/Special-Note-11-02)")
 
@@ -106,7 +106,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await edit_or_reply(wannasee,
-                        "𝐇ᴇʏ, 𝐈'ᴍ 𝐔sɪɴɢ **🥷ᴊσσ-ᴜѕᴇʀвσт 🥷** \n"
+                        "𝐇ᴇʏ, 𝐈'ᴍ 𝐔sɪɴɢ **🥷ᴊσσ-ᴜѕᴇʀвσт🥷** \n"
                         "❖━━━━•✧•━━━━•✧•━━━━•✧•━━━━❖\n"
                         "✪ **𝐑ᴇᴘᴏ 𝐔sᴇʀʙᴏᴛ :** [𝐆ɪᴛʜᴜʙ](https://github.com/jookalem/Joo-Userbot)\n"
                         "✪ **𝐎ᴡɴᴇʀ 𝐑ᴇᴘᴏ  :** [𝐈ᴋʜsᴀɴ](t.me/ikhsanntarjo)\n"
