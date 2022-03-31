@@ -224,14 +224,16 @@ async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"᯽ **Name :** [{user.first_name}](tg://user?id={user.id}) \n"
-        f"᯽ **Username :** @{user.username} \n"
-        f"᯽ **Telethon Version :** `{version.__version__}` \n"
-        f"᯽ **Python Version :** `{python_version()}` \n"
-        f"᯽ **Pytgcalls Version :** `{pytgcalls.__version__}` \n"
-        f"᯽ **Bot Version :** `{BOT_VER}` \n"
-        f"᯽ **Modules :** `{len(modules)}` Modules \n"
-        f"  **[ɢʀᴏᴜᴘꜱ](https://t.me/JoniSupport)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/ProjectJoni)** | **[ᴏᴡɴᴇʀ](https://t.me/ikhsanntarjo)** | **[ɢɪᴛʜᴜʙ](https://github.com/jookalem/Joo-Userbot)**"
+        f"┍━━━━━━━━━☽【❖】☾━━━━━━━┑ \n"
+        f"᯽ ➛ **ɴᴀᴍᴇ :** [{user.first_name}](tg://user?id={user.id}) \n"
+        f"᯽ ➛ **ᴜsᴇʀɴᴀᴍᴇ :** @{user.username} \n"
+        f"᯽ ➛ **ᴛᴇʟᴇᴛʜᴏɴ :** `{version.__version__}` \n"
+        f"᯽ ➛ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{python_version()}` \n"
+        f"᯽ ➛ **ᴘʏᴛɢᴄᴀʟʟs ᴠᴇʀsɪᴏɴ :** `{pytgcalls.__version__}` \n"
+        f"᯽ ➛ **ʙᴏᴛ ᴠᴇʀsɪᴏɴ :** `{BOT_VER}` \n"
+        f"᯽ ➛ **ᴍᴏᴅᴜʟᴇs :** `{len(modules)}` ᴍᴏᴅᴜʟᴇs \n"
+        f"┕━━━━━━━━━☽【❖】☾━━━━━━━┙ \n"
+        f"     **[ɢʀᴏᴜᴘꜱ](https://t.me/JoniSupport)** | **[ᴄʜᴀɴɴᴇʟ](https://t.me/ProjectJoni)** | **[ᴏᴡɴᴇʀ](https://t.me/ikhsanntarjo)** | **[ɢɪᴛʜᴜʙ](https://github.com/jookalem/Joo-Userbot)**"
     )
     if ALIVE_LOGO:
         try:
