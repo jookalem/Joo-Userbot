@@ -137,7 +137,7 @@ async def typewriter(typew):
 
 
 CMD_HELP.update({
-    "toxic2": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}bego`\
+    "toxic3": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}bego`\
     \n↳ : Cobain aja\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tolol`\
     \n↳ : Cobain aja\
