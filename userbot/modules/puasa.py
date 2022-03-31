@@ -64,7 +64,7 @@ async def typewriter(typew):
 
     sleep(1)
 
-    await jo.edit("nanti lu dapet dosa bro")
+    await jo.edit("`nanti lu dapet dosa bro`")
 
     sleep(1)
 
