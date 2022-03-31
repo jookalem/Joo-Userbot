@@ -148,7 +148,7 @@ CMD_HELP.update(
         \n  •  **Function : **Ngeledek bapaknya si jamet\
         \n\n  •  **Syntax :** `{cmd}cuih`\
         \n  •  **Function : **Ngeludahin keluarganya satu satu wkwk\
-        \n\n**Kalau Mau Req Kosa Kata Ke Owner Gua Ya Kontol ☞ @Bisubiarenak**\
+        \n\n**Kalau Mau Req Kosa Kata Ke Owner Gua Ya Kontol ☞ @ikhsanntarjo**\
     "
     }
 )
