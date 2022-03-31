@@ -122,7 +122,7 @@ async def typewriter(typew):
 
 CMD_HELP.update({
 
-    "puasa": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}nyemen`\
+    "ramadhan": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}nyemen`\
     \n↳ : Cobain aja\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}maaf`\
     \n↳ : Cobain aja\
