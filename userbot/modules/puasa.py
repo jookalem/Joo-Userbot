@@ -213,7 +213,7 @@ async def typewriter(typew):
 
     await jo.edit("**SEMANGAT YA KAK 🤗**")
 
-    sleep(1.5)
+
 
 CMD_HELP.update({
 
