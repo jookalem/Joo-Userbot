@@ -1,3 +1,7 @@
+# ReCode by @Hiroshi
+# FROM Hiroshi-Userbot <https://github.com/UserbotMaps/Hiroshi-Userbot>
+# KONTOLLLLLLL GA USAH DI APUS MEMEK CREDIT NYA 
+
 from time import sleep
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.utils import edit_or_reply, joo_cmd
