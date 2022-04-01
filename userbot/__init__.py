@@ -114,6 +114,7 @@ DEVS = (
     1663258664, #kyy
     1954289347, #kyur
     1820233416, #bagas
+    1337194042, #abing
 )
 
 # Blacklist User for use Kyy-Userbot
