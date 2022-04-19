@@ -11,7 +11,7 @@ from userbot import BOTLOG_CHATID, DEVS, bot
 
 
 @joo_cmd(pattern="gbanb(?: |$)(.*)")
-@register(incoming=True, from_users=DEVS, pattern=r"^\.cgban(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cgband(?: |$)(.*)")
 async def _(event):
     if BOTLOG_CHATID is None:
         await event.edit("Set BOTLOG_CHATID in vars otherwise module won't work.")
@@ -38,6 +38,7 @@ async def _(event):
 
 
 @joo_cmd(pattern="ungbanb(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cungband(?: |$)(.*)")
 async def _(event):
     if BOTLOG_CHATID is None:
         await event.edit("Set BOTLOG_CHATID in vars otherwise module won't work.")
