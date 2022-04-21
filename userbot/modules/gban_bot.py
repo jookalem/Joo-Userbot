@@ -7,6 +7,7 @@ import asyncio
 from userbot import CMD_HELP, owner, CMD_HANDLER as cmd
 from userbot.utils import joo_cmd
 from userbot import BOTLOG_CHATID, DEVS, bot
+from userbot.events import register
 # imported from uniborg by @heyworld
 
 
