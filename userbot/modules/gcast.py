@@ -36,6 +36,7 @@ GCAST_BLACKLIST = [
     -1001554560763,  # Vegeta Supports
     -1001692751821,  # RamSupportGroup
     -1001538752127,  # Abing Support
+    -1001795125065,  # Bagas Kontol
 
 ]
 
